@@ -1,1 +1,3 @@
-# FloreMalonda_3_4122020
+# Ohmyfood
+
+Deuxième projet réalisé dans le cadre de mon parcours Développeur d'applications Front-end en alternance avec OpenClassrooms
