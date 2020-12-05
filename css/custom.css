@@ -17,4 +17,70 @@ html, body {
   padding: 0;
 }
 
+.container-width {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/*partie des restaurants*/
+.container2 {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.restaurant-title {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+.contenu {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #EAEAEA;
+  width: 95%;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  height: 45%;
+}
+
+.card-img-top {
+  background-size: cover;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 150px;
+}
+
+.block-card a {
+  text-decoration: none;
+  color: black;
+}
+
+.card-text {
+  margin-top: -5px;
+}
+
+.card-body {
+  margin-left: 20px;
+  margin-bottom: 25px;
+  margin-top: -5px;
+}
+
+.like {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: -40px;
+  margin-bottom: 15px;
+}
+
+/*partie footer*/
+footer {
+  background-color: grey;
+  height: 100%;
+}
+
 /*# sourceMappingURL=custom.css.map */
