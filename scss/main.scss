@@ -17,15 +17,23 @@ html, body {
     padding: 0;
 }
 
+body {
+    background-color: #F2F2F2;
+}
+
 .container-width {
     max-width: 1120px;
     margin: auto;
     padding: 0 10px;
 }
 
+.container1 {
+    width: 100%;
+    background-color: white;
+}
+
 /*partie des restaurants*/
 .container2 {
-    background-color: #F2F2F2;
     width: 100%;
 }
 
