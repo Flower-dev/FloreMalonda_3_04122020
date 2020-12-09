@@ -18,7 +18,50 @@ html, body {
 }
 
 body {
-    background-color: #F2F2F2;
+    background-color: #f6f6f6;
+}
+
+/*
+$color-back:#f6f6f6;
+$color-primary:#9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+*/
+
+.logo {
+    text-align: center;
+    background-color: white;
+}
+
+.logo img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    background-color: red;
+}
+
+.searchbar {
+    width: 100%; 
+}
+
+.container0 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.bouton {
+    text-decoration: none; 
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    color: white;
+}
+
+.filtres a {
+    text-decoration: none;
+    color: black;
 }
 
 .container-width {
@@ -40,6 +83,10 @@ body {
 .restaurant-title {
     margin-top: 25px;
     margin-left: 20px;
+}
+
+.contenu a {
+    position: absolute;
 }
 
 .contenu {
@@ -88,6 +135,14 @@ body {
 /*partie footer*/
 
 footer {
-    background-color: grey;
+    background-color: #353535;
     height: 100%;
+    width: 100%;
+    margin-bottom: -15px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 20px;
 }
