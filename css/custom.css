@@ -21,7 +21,13 @@ body {
   background-color: #f6f6f6;
 }
 
-/*
+.container-width {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+/* gérer pour faire du sass propre
 $color-back:#f6f6f6;
 $color-primary:#9356DC;
 $color-secondary: #FF79DA;
@@ -33,19 +39,42 @@ $color-tertiary: #99E2D0;
 }
 
 .logo img {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .container {
   width: 100%;
-  background-color: red;
+  background-color: #eaeaea;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*ne pas oublier de mettre l'ombre (gris foncé) en position top 
+  attention doit se trouver à l'interieur du container*/
 }
 
 .searchbar {
   width: 100%;
+  border: none;
+  text-align: center;
 }
 
+.searchbar i {
+  color: #353535;
+}
+
+#searchbox {
+  text-decoration: none;
+  background-color: #eaeaea;
+  border: none;
+}
+
+#searchbox::placeholder {
+  color: #353535;
+  font-weight: medium;
+  text-align: center;
+}
+
+/*bouton permettant de rechercher des restaurants*/
 .container0 {
   text-align: center;
   margin-left: 50px;
@@ -53,9 +82,46 @@ $color-tertiary: #99E2D0;
 }
 
 .bouton {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.bouton1 {
   text-decoration: none;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   color: white;
+  border-radius: 30px;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/*Partie fonctionnement*/
+.container1 {
+  width: 100%;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.info-title {
+  margin-left: 20px;
+}
+
+.bulle {
+  background-color: #9356DC;
+  display: inline-block;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: white;
+  font-weight: bold;
+  padding: -10px;
+}
+
+.bulle p {
+  padding-top: -20px;
 }
 
 .filtres a {
@@ -63,18 +129,8 @@ $color-tertiary: #99E2D0;
   color: black;
 }
 
-.container-width {
-  max-width: 1120px;
-  margin: auto;
-  padding: 0 10px;
-}
-
-.container1 {
-  width: 100%;
-  background-color: white;
-}
-
 /*partie des restaurants*/
+/*trouver une solution pour que l'intégralité des cartes soit clicable*/
 .container2 {
   width: 100%;
 }
@@ -144,5 +200,7 @@ footer a {
   color: white;
   padding-bottom: 20px;
 }
+
+/*attention contact doit renvoyer sur une adresse mail*/
 
 /*# sourceMappingURL=custom.css.map */
