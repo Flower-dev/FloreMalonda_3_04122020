@@ -21,7 +21,13 @@ body {
     background-color: #f6f6f6;
 }
 
-/*
+.container-width {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+/* gérer pour faire du sass propre
 $color-back:#f6f6f6;
 $color-primary:#9356DC;
 $color-secondary: #FF79DA;
@@ -31,21 +37,46 @@ $color-tertiary: #99E2D0;
 .logo {
     text-align: center;
     background-color: white;
+    width: 100%;
 }
 
 .logo img {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .container {
     width: 100%;
-    background-color: red;
+    background-color: #eaeaea;
+    padding-top: 10px;
+    padding-bottom: 10px;
+/*ne pas oublier de mettre l'ombre (gris foncé) en position top 
+attention doit se trouver à l'interieur du container*/   
 }
 
 .searchbar {
     width: 100%; 
+    border:none;
+    text-align: center;
 }
+
+.searchbar i {
+    color: #353535;
+}
+
+#searchbox {
+    text-decoration: none;
+    background-color: #eaeaea;
+    border: none;
+}
+
+#searchbox::placeholder {
+    color: #353535;
+    font-weight: medium;
+    text-align: center;
+}
+
+/*bouton permettant de rechercher des restaurants*/
 
 .container0 {
     text-align: center;
@@ -54,28 +85,87 @@ $color-tertiary: #99E2D0;
 }
 
 .bouton {
+    margin-top: 30px;
+    margin-bottom: 35px;
+}
+
+.bouton1 {
     text-decoration: none; 
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     color: white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 11px;
 }
 
-.filtres a {
-    text-decoration: none;
-    color: black;
-}
-
-.container-width {
-    max-width: 1120px;
-    margin: auto;
-    padding: 0 10px;
-}
+/*Partie fonctionnement*/
 
 .container1 {
     width: 100%;
     background-color: white;
+    padding-top: 10px;
+    padding-bottom: 15px;
 }
 
+.info-title {
+    margin-left: 20px;
+}
+
+.block-filter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.filtres {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90%;
+}
+
+.filtres a {
+    text-decoration: none;
+    color: #353535; /*attention à la couleur de la font qui n'est pas noir*/
+    font-size: 11px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.infographie i {
+    color: #353535; /*changer la couleur par défaut
+    ne pas oublier que i doit changer de couleur à la selection du filtre*/
+
+}
+
+.bulle {
+    background-color: #9356DC;
+    display: inline-block;
+    border-radius: 100%;
+    margin-top: 3px;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    font-size: 8px;
+    color: white; 
+    margin-top: 15px;
+}
+
+.bulle p {
+    padding-top: 3px;
+    margin-top: -1px;
+}
+
+
 /*partie des restaurants*/
+
+/*trouver une solution pour que l'intégralité des cartes soit clicable*/
 .container2 {
     width: 100%;
 }
@@ -146,3 +236,5 @@ footer a {
     color: white;
     padding-bottom: 20px;
 }
+
+/*attention contact doit renvoyer sur une adresse mail*/
