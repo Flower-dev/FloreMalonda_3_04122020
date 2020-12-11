@@ -199,8 +199,6 @@ attention doit se trouver à l'interieur du container*/
     }
 }
 
-
-
 /*Partie fonctionnement*/
 
 .container1 {
@@ -379,3 +377,54 @@ footer {
 }
 
 /*attention contact doit renvoyer sur une adresse mail*/
+
+/*partie page menu*/
+
+.logoinfographie {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+
+    .infographie-fleche {
+        color: #353535;
+        padding-top: 6%;
+        padding-left: 4%;
+    }
+}
+
+.backgroundimage {
+    width: 100%;
+
+    .img-top {
+        background-size: cover;
+            object-fit: cover;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+.container-menu {
+    padding-top: -6%;
+    width: 100%;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    .restaurant {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+
+        .title-restaurant {
+            font-family: shrikhand;
+            margin-left: 5%;
+        }
+
+        .like-restaurant {
+            margin-top: 6%;
+            margin-left: 5%;
+        }
+    }
+}
+
