@@ -20,6 +20,12 @@ body {
   background-color: #f6f6f6;
 }
 
+/* gérer pour faire du sass propre
+$color-back:#f6f6f6;
+$color-primary:#9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+*/
 /*éléments en lien avec le loader spinner
 .loader {
     position: absolute;
@@ -120,12 +126,6 @@ animation: lol 3s 500ms ease-in-out;
   padding: 0 10px;
 }
 
-/* gérer pour faire du sass propre
-$color-back:#f6f6f6;
-$color-primary:#9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-*/
 .logo {
   text-align: center;
   background-color: white;
@@ -178,6 +178,7 @@ $color-tertiary: #99E2D0;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 5px 5px 5px #d5d5d5;
   color: white;
+  border: none;
   border-radius: 30px;
   padding: 10px;
   font-size: 11px;
@@ -327,7 +328,7 @@ des cartes soit clicable*/
   avec un dégradé de couleurs*/
 }
 
-/*partie footer*/
+/*partie footer - identique pour l'ensemble des pages du site*/
 footer {
   background-color: #353535;
   height: 100%;
@@ -351,7 +352,7 @@ footer a {
 }
 
 /*attention contact doit renvoyer sur une adresse mail*/
-/*partie page menu*/
+/*partie page menu - la mise en page est identique pour l'ensemble des restaurants*/
 .logoinfographie {
   display: flex;
   flex-direction: row;
@@ -359,9 +360,12 @@ footer a {
   width: 100%;
 }
 .logoinfographie .infographie-fleche {
-  color: #353535;
   padding-top: 6%;
   padding-left: 4%;
+}
+.logoinfographie .infographie-fleche a {
+  text-decoration: none;
+  color: black;
 }
 
 .backgroundimage {
@@ -374,9 +378,13 @@ footer a {
   padding: 0;
 }
 
+/*régler la taille de l'image pour qu'elle fasse 100% 
+de la largeur de la page*/
 .container-menu {
-  padding-top: -6%;
+  margin-top: -12%;
   width: 100%;
+  background-color: #f6f6f6;
+  position: relative;
   z-index: 3;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -388,11 +396,71 @@ footer a {
 }
 .container-menu .restaurant .title-restaurant {
   font-family: shrikhand;
-  margin-left: 5%;
+  margin-left: 5px;
 }
 .container-menu .restaurant .like-restaurant {
   margin-top: 6%;
-  margin-left: 5%;
+  margin-left: 40%;
+}
+.container-menu .menu .partie2 {
+  margin-top: 10%;
+}
+.container-menu .menu .partie3 {
+  margin-top: 10%;
+}
+.container-menu .menu .title-menu {
+  font-weight: lighter;
+  font-size: 13px;
+  text-decoration: underline #99E2D0;
+  /*border-bottom: 2px #99E2D0 solid;
+  voir pour réduire la taille de la bordure*/
+  margin-left: 5px;
+}
+.container-menu .menu .card-body-menu {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #EAEAEA;
+  margin-right: 5px;
+}
+.container-menu .menu .card-title-menu {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.container-menu .menu .card-text-menu {
+  padding-left: 10px;
+  margin-top: -15px;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+.container-menu .menu .card-text-menu span {
+  font-size: 11px;
+  font-weight: bolder;
+  /*gérer l'espace entre le texte et le prix*/
+}
+.container-menu .bouton-commande {
+  margin-top: 30px;
+  margin-bottom: 35px;
+  margin-left: 30%;
+}
+.container-menu .bouton-commande .bouton1-commande {
+  text-decoration: none;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  box-shadow: 5px 5px 5px #d5d5d5;
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  font-size: 11px;
+}
+.container-menu .bouton-commande .bouton1-commande:hover {
+  background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
+  /*jouer sur la saturation 
+  des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+  box-shadow: 5px 5px 5px #b8b8b8;
+  /*ombre portée plus visible*/
 }
 
 /*# sourceMappingURL=custom.css.map */
