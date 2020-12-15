@@ -1,0 +1,58 @@
+/*bouton permettant de rechercher des restaurants*/
+
+.container0 {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+
+    .bouton {
+        margin-top: 30px;
+        margin-bottom: 35px;
+    }
+
+    .bouton1 {
+        text-decoration: none;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        box-shadow: 5px 5px 5px #d5d5d5;
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 10px;
+        font-size: 11px;
+
+        &:hover {
+            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
+            des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+            box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
+        }
+    }
+}
+
+
+/*bouton pour commander - se trouve sur les pages menus*/
+.bouton-commande {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    margin-left: 30%;
+
+    .bouton1-commande {
+        text-decoration: none;
+        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+        box-shadow: 5px 5px 5px #d5d5d5;
+        border: none;
+        color: white;
+        border-radius: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 11px;
+
+
+        &:hover {
+            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
+            des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+            box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
+        }
+    }
+}
