@@ -12,18 +12,18 @@
 
     .bouton1 {
         text-decoration: none;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-        box-shadow: 5px 5px 5px #d5d5d5;
-        color: white;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        box-shadow: 5px 5px 5px $color-shadow;
+        color: $color-font-bis;
         border: none;
         border-radius: 30px;
         padding: 10px;
         font-size: 11px;
 
         &:hover {
-            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
+            background: linear-gradient(to bottom right, $color-secondary-bis, $color-primary-bis); /*jouer sur la saturation
             des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
-            box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
+            box-shadow: 5px 5px 5px $color-shadow-bis; /*ombre portée plus visible*/
         }
     }
 }
@@ -37,10 +37,10 @@
 
     .bouton1-commande {
         text-decoration: none;
-        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
-        box-shadow: 5px 5px 5px #d5d5d5;
+        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        box-shadow: 5px 5px 5px $color-shadow;
         border: none;
-        color: white;
+        color: $color-font-bis;
         border-radius: 30px;
         padding-top: 10px;
         padding-bottom: 10px;
@@ -50,9 +50,9 @@
 
 
         &:hover {
-            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
+            background: linear-gradient(to bottom right, $color-secondary-bis, $color-primary-bis); /*jouer sur la saturation
             des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
-            box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
+            box-shadow: 5px 5px 5px $color-shadow-bis; /*ombre portée plus visible*/
         }
     }
 }

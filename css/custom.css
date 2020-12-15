@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*ce qui s'applique à l'ensemble du site - style général*/
+/*liens vers les différents fichiers .scss*/
 * {
   box-sizing: border-box;
 }
@@ -26,6 +26,81 @@ body {
   padding: 0 10px;
 }
 
+/*partie header sur la page d'accueil*/
+.logo {
+  text-align: center;
+  background-color: white;
+  width: 100%;
+}
+.logo img {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/*partie page menu - la mise en page est identique pour l'ensemble des restaurants*/
+/*correspond à la flèche de retour + au logo*/
+.logoinfographie {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  width: 100%;
+}
+.logoinfographie .infographie-fleche {
+  padding-top: 6%;
+  padding-left: 4%;
+}
+.logoinfographie .infographie-fleche a {
+  text-decoration: none;
+  color: black;
+}
+
+/*doit correspondre aux images qui se trouvent sur les pages menu*/
+.backgroundimage {
+  width: 100%;
+}
+.backgroundimage .img-top {
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  padding: 0;
+}
+
+/*partie footer - identique pour l'ensemble des pages du site*/
+footer {
+  background-color: #353535;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -15px;
+  padding-bottom: 20px;
+}
+footer h6 {
+  color: white;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-family: shrikhand;
+  font-size: 12px;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-size: 11px;
+}
+
+/*attention contact doit renvoyer sur une adresse mail*/
+/*Partie fonctionnement*/
+.container1 {
+  width: 100%;
+  background-color: white;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.info-title {
+  margin-left: 20px;
+}
+
 .block-filter {
   display: flex;
   flex-direction: row;
@@ -43,8 +118,9 @@ body {
   border-radius: 10px;
   padding: 10px;
   width: 90%;
+  transition: background-color 0.25s ease;
 }
-.block-filter .filtres :active {
+.block-filter .filtres:hover {
   background-color: #c697ff;
 }
 .block-filter .filtres a {
@@ -60,8 +136,27 @@ body {
   /*changer la couleur par défaut
   ne pas oublier que i doit changer de couleur à la selection du filtre*/
 }
-.block-filter .filtres .infographie i :hover {
+.block-filter .filtres .infographie i:hover {
   color: #9356DC;
+}
+
+.bulle {
+  background-color: #9356DC;
+  display: inline-block;
+  border-radius: 100%;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  font-size: 7px;
+  color: white;
+  margin-top: 11px;
+  margin-left: -6px;
+  position: absolute;
+  z-index: 3;
+}
+.bulle p {
+  padding-top: 3px;
+  margin-top: -1px;
 }
 
 /*bouton permettant de rechercher des restaurants*/
@@ -117,6 +212,180 @@ body {
   des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
   box-shadow: 5px 5px 5px #b8b8b8;
   /*ombre portée plus visible*/
+}
+
+/*partie des restaurants*/
+.container2 {
+  width: 100%;
+}
+.container2 .restaurant-title {
+  margin-top: 25px;
+  margin-left: 20px;
+}
+.container2 .block-card a {
+  text-decoration: none;
+  color: black;
+}
+.container2 .block-card .contenu {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #EAEAEA;
+  width: 95%;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  height: 45%;
+}
+.container2 .block-card .contenu .card-img-top {
+  background-size: cover;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  height: 150px;
+}
+.container2 .block-card .contenu .new {
+  position: absolute;
+  z-index: 3;
+  margin-top: -38%;
+  margin-left: 74%;
+  background-color: #99E2D0;
+}
+.container2 .block-card .contenu .new .new1 {
+  color: #39a98e;
+  padding: 5px;
+  margin: -2px;
+}
+.container2 .block-card .contenu .block-card a {
+  text-decoration: none;
+  color: black;
+}
+.container2 .block-card .contenu .card-body {
+  margin-left: 20px;
+  margin-bottom: 25px;
+  margin-top: -5px;
+}
+.container2 .block-card .contenu .card-body .card-text {
+  margin-top: -5px;
+  padding-bottom: 10px;
+}
+.container2 .block-card .contenu .card-body .like {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: -40px;
+  margin-bottom: 15px;
+}
+.container2 .block-card .contenu .card-body .like:active {
+  color: #FF79DA;
+  /*pour le
+  moment au clic - changement de couleur
+  pour la bordure - voir pour remplir l'interieur du coeur
+  avec un dégradé de couleurs*/
+}
+
+.container {
+  width: 100%;
+  background-color: #eaeaea;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /*ne pas oublier de mettre l'ombre (gris foncé) en position top
+  attention doit se trouver à l'interieur du container*/
+}
+.container .searchbar {
+  width: 100%;
+  border: none;
+  text-align: center;
+}
+.container .searchbar i {
+  color: #353535;
+}
+.container #searchbox {
+  text-decoration: none;
+  background-color: #eaeaea;
+  border: none;
+}
+.container #searchbox ::placeholder {
+  color: #353535;
+  font-weight: medium;
+  text-align: center;
+}
+
+.container-menu {
+  margin-top: -12%;
+  width: 100%;
+  background-color: #f6f6f6;
+  position: relative;
+  z-index: 3;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+.container-menu .restaurant {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.container-menu .restaurant .title-restaurant {
+  font-family: shrikhand;
+  margin-left: 5px;
+}
+.container-menu .restaurant .like-restaurant {
+  margin-top: 6%;
+  margin-left: 40%;
+}
+.container-menu .menu .partie2 {
+  margin-top: 10%;
+}
+.container-menu .menu .partie3 {
+  margin-top: 10%;
+}
+.container-menu .menu .title-menu {
+  font-weight: lighter;
+  font-size: 13px;
+  text-decoration: underline #99E2D0;
+  /*border-bottom: 2px #99E2D0 solid;
+  voir pour réduire la taille de la bordure*/
+  margin-left: 5px;
+}
+.container-menu .menu .card-body-menu {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #EAEAEA;
+  margin-right: 5px;
+}
+.container-menu .menu .card-body-menu .card-title-menu {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.container-menu .menu .card-body-menu .card-text-menu {
+  padding-left: 10px;
+  margin-top: -15px;
+  padding-bottom: 10px;
+  font-size: 11px;
+}
+.container-menu .menu .card-body-menu .card-text-menu span {
+  font-size: 11px;
+  font-weight: bolder;
+  /*gérer l'espace entre le texte et le prix*/
+}
+.container-menu .validation {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: 75%;
+  margin-top: -18%;
+}
+.container-menu .validation i {
+  background-color: white;
+  font-size: 10px;
+  color: #99E2D0;
+  padding: 3px;
+  border-radius: 100%;
+  margin-left: 40%;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 
 /*éléments en lien avec le loader spinner
@@ -213,316 +482,5 @@ animation: lol 3s 400ms ease-in-out;
 animation: lol 3s 500ms ease-in-out;
 }
 */
-.logo {
-  text-align: center;
-  background-color: white;
-  width: 100%;
-}
-.logo img {
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.container {
-  width: 100%;
-  background-color: #eaeaea;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  /*ne pas oublier de mettre l'ombre (gris foncé) en position top
-  attention doit se trouver à l'interieur du container*/
-}
-.container .searchbar {
-  width: 100%;
-  border: none;
-  text-align: center;
-}
-.container .searchbar i {
-  color: #353535;
-}
-.container #searchbox {
-  text-decoration: none;
-  background-color: #eaeaea;
-  border: none;
-}
-.container #searchbox ::placeholder {
-  color: #353535;
-  font-weight: medium;
-  text-align: center;
-}
-
-/*Partie fonctionnement*/
-.container1 {
-  width: 100%;
-  background-color: white;
-  padding-top: 5px;
-  padding-bottom: 15px;
-}
-
-.info-title {
-  margin-left: 20px;
-}
-
-.block-filter {
-  display: flex;
-  flex-direction: row;
-  margin-left: 15px;
-  margin-bottom: 15px;
-}
-.block-filter .filtres {
-  margin-bottom: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #f6f6f6;
-  box-shadow: 5px 5px 5px #d5d5d5;
-  border-radius: 10px;
-  padding: 10px;
-  width: 90%;
-  transition: background-color 0.25s ease;
-}
-.block-filter .filtres:hover {
-  background-color: #c697ff;
-}
-.block-filter .filtres a {
-  text-decoration: none;
-  color: #353535;
-  /*attention à la couleur de la font qui n'est pas noir*/
-  font-size: 11px;
-  font-weight: bold;
-  padding-right: 10px;
-}
-.block-filter .filtres .infographie i {
-  color: #353535;
-  /*changer la couleur par défaut
-  ne pas oublier que i doit changer de couleur à la selection du filtre*/
-}
-.block-filter .filtres .infographie i:hover {
-  color: #9356DC;
-}
-
-/*Remarque générale : pour le moment le :hover sur les filtres ne fonctionne pas
-correctement à revoir tout comme le :hover sur les icones qui devait changer en
-meme temps que le filtres*/
-.bulle {
-  background-color: #9356DC;
-  display: inline-block;
-  border-radius: 100%;
-  width: 17px;
-  height: 17px;
-  text-align: center;
-  font-size: 7px;
-  color: white;
-  margin-top: 11px;
-  margin-left: -6px;
-  position: absolute;
-  z-index: 3;
-}
-.bulle p {
-  padding-top: 3px;
-  margin-top: -1px;
-}
-
-/*partie des restaurants*/
-/*trouver une solution pour que l'intégralité
-des cartes soit clicable*/
-/*ne pas oublier de jouer sur les padding*/
-.container2 {
-  width: 100%;
-}
-.container2 .restaurant-title {
-  margin-top: 25px;
-  margin-left: 20px;
-}
-.container2 .block-card a {
-  text-decoration: none;
-  color: black;
-}
-.container2 .block-card .contenu {
-  box-sizing: border-box;
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px #EAEAEA;
-  width: 95%;
-  margin-bottom: 20px;
-  margin-left: 10px;
-  height: 45%;
-}
-.container2 .block-card .contenu .card-img-top {
-  background-size: cover;
-  object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  width: 100%;
-  height: 150px;
-}
-.container2 .block-card .contenu .new {
-  position: absolute;
-  z-index: 3;
-  margin-top: -38%;
-  margin-left: 74%;
-  background-color: #99E2D0;
-}
-.container2 .block-card .contenu .new .new1 {
-  color: #39a98e;
-  padding: 5px;
-  margin: -2px;
-}
-.container2 .block-card .contenu .block-card a {
-  text-decoration: none;
-  color: black;
-}
-.container2 .block-card .contenu .card-body {
-  margin-left: 20px;
-  margin-bottom: 25px;
-  margin-top: -5px;
-}
-.container2 .block-card .contenu .card-body .card-text {
-  margin-top: -5px;
-  padding-bottom: 10px;
-}
-.container2 .block-card .contenu .card-body .like {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 15px;
-  margin-top: -40px;
-  margin-bottom: 15px;
-}
-.container2 .block-card .contenu .card-body .like:active {
-  color: #FF79DA;
-  /*pour le
-  moment au clic - changement de couleur
-  pour la bordure - voir pour remplir l'interieur du coeur
-  avec un dégradé de couleurs*/
-}
-
-/*partie footer - identique pour l'ensemble des pages du site*/
-footer {
-  background-color: #353535;
-  height: 100%;
-  width: 100%;
-  margin-bottom: -15px;
-  padding-bottom: 20px;
-}
-footer h6 {
-  color: white;
-  padding-top: 15px;
-  padding-left: 20px;
-  font-family: shrikhand;
-  font-size: 12px;
-}
-footer a {
-  text-decoration: none;
-  color: white;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  font-size: 11px;
-}
-
-/*attention contact doit renvoyer sur une adresse mail*/
-/*partie page menu - la mise en page est identique pour l'ensemble des restaurants*/
-.logoinfographie {
-  display: flex;
-  flex-direction: row;
-  background-color: white;
-  width: 100%;
-}
-.logoinfographie .infographie-fleche {
-  padding-top: 6%;
-  padding-left: 4%;
-}
-.logoinfographie .infographie-fleche a {
-  text-decoration: none;
-  color: black;
-}
-
-.backgroundimage {
-  width: 100%;
-}
-.backgroundimage .img-top {
-  background-size: cover;
-  object-fit: cover;
-  width: 100%;
-  padding: 0;
-}
-
-/*régler la taille de l'image pour qu'elle fasse 100%
-de la largeur de la page*/
-.container-menu {
-  margin-top: -12%;
-  width: 100%;
-  background-color: #f6f6f6;
-  position: relative;
-  z-index: 3;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-}
-.container-menu .restaurant {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-}
-.container-menu .restaurant .title-restaurant {
-  font-family: shrikhand;
-  margin-left: 5px;
-}
-.container-menu .restaurant .like-restaurant {
-  margin-top: 6%;
-  margin-left: 40%;
-}
-.container-menu .menu .partie2 {
-  margin-top: 10%;
-}
-.container-menu .menu .partie3 {
-  margin-top: 10%;
-}
-.container-menu .menu .title-menu {
-  font-weight: lighter;
-  font-size: 13px;
-  text-decoration: underline #99E2D0;
-  /*border-bottom: 2px #99E2D0 solid;
-  voir pour réduire la taille de la bordure*/
-  margin-left: 5px;
-}
-.container-menu .menu .card-body-menu {
-  background-color: white;
-  border-radius: 15px;
-  box-shadow: 5px 5px 5px #EAEAEA;
-  margin-right: 5px;
-}
-.container-menu .menu .card-body-menu .card-title-menu {
-  padding-left: 10px;
-  padding-top: 10px;
-}
-.container-menu .menu .card-body-menu .card-text-menu {
-  padding-left: 10px;
-  margin-top: -15px;
-  padding-bottom: 10px;
-  font-size: 11px;
-}
-.container-menu .menu .card-body-menu .card-text-menu span {
-  font-size: 11px;
-  font-weight: bolder;
-  /*gérer l'espace entre le texte et le prix*/
-}
-.container-menu .validation {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  margin-left: 75%;
-  margin-top: -18%;
-}
-.container-menu .validation i {
-  background-color: white;
-  font-size: 10px;
-  color: #99E2D0;
-  padding: 3px;
-  border-radius: 100%;
-  margin-left: 40%;
-  margin-top: 20%;
-  margin-bottom: 20%;
-}
 
 /*# sourceMappingURL=custom.css.map */

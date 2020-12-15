@@ -1,3 +1,17 @@
+/*Partie fonctionnement*/
+
+.container1 {
+  width: 100%;
+  background-color: $color-back-bis;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.info-title {
+  margin-left: 20px;
+}
+
+
 .block-filter {
   display: flex;
   flex-direction: row;
@@ -5,36 +19,58 @@
   margin-bottom: 15px;
 
   .filtres {
-    margin-bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #f6f6f6;
-    box-shadow: 5px 5px 5px #d5d5d5;
-    border-radius: 10px;
-    padding: 10px;
-    width: 90%;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $color-back;
+      box-shadow: 5px 5px 5px $color-shadow;
+      border-radius: 10px;
+      padding: 10px;
+      width: 90%;
+      transition: background-color .250s ease;
 
-    :active {
-      background-color: #c697ff;
-    }
-
-    a {
-      text-decoration: none;
-      color: #353535; /*attention à la couleur de la font qui n'est pas noir*/
-      font-size: 11px;
-      font-weight: bold;
-      padding-right: 10px;
-    }
-
-    .infographie i {
-      color: #353535; /*changer la couleur par défaut
-            ne pas oublier que i doit changer de couleur à la selection du filtre*/
-
-      :hover{
-        color: #9356DC;
+      &:hover {
+          background-color: $color-primary-bis;
       }
-    }
+
+      a {
+          text-decoration: none;
+          color: $color-footer; /*attention à la couleur de la font qui n'est pas noir*/
+          font-size: 11px;
+          font-weight: bold;
+          padding-right: 10px;
+      }
+
+      .infographie i {
+          color: $color-footer; /*changer la couleur par défaut
+          ne pas oublier que i doit changer de couleur à la selection du filtre*/
+
+          &:hover{
+              color: $color-primary;
+          }
+      }
+  }
+}
+
+.bulle {
+  background-color: $color-primary;
+  display: inline-block;
+  border-radius: 100%;
+  width: 17px;
+  height: 17px;
+  text-align: center;
+  font-size: 7px;
+  color: $color-font-bis;
+  margin-top: 11px;
+  margin-left: -6px;
+  position:absolute;
+  z-index: 3;
+
+
+  p {
+      padding-top: 3px;
+      margin-top: -1px;
   }
 }

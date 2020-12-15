@@ -24,3 +24,79 @@ body {
   margin: auto;
   padding: 0 10px;
 }
+
+/*partie header sur la page d'accueil*/
+.logo {
+  text-align: center;
+  background-color: $color-back-bis;
+  width: 100%;
+
+  img {
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+}
+
+
+/*partie page menu - la mise en page est identique pour l'ensemble des restaurants*/
+/*correspond à la flèche de retour + au logo*/
+
+.logoinfographie {
+  display: flex;
+  flex-direction: row;
+  background-color: $color-back-bis;
+  width: 100%;
+
+  .infographie-fleche {
+      padding-top: 6%;
+      padding-left: 4%;
+
+      a {
+          text-decoration: none;
+          color: $color-font;
+      }
+  }
+}
+
+/*doit correspondre aux images qui se trouvent sur les pages menu*/
+
+.backgroundimage {
+  width: 100%;
+
+  .img-top {
+      background-size: cover;
+      object-fit: cover;
+      width: 100%;
+      padding: 0;
+  }
+} 
+
+
+/*partie footer - identique pour l'ensemble des pages du site*/
+
+footer {
+  background-color: $color-footer;
+  height: 100%;
+  width: 100%;
+  margin-bottom: -15px;
+  padding-bottom: 20px;
+
+  h6 {
+      color: $color-font-bis;
+      padding-top: 15px;
+      padding-left: 20px;
+      font-family: shrikhand;
+      font-size: 12px;
+  }
+
+  a {
+      text-decoration: none;
+      color: $color-font-bis;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      font-size: 11px;
+  }
+}
+
+/*attention contact doit renvoyer sur une adresse mail*/
+

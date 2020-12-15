@@ -1,0 +1,94 @@
+/*éléments en lien avec le loader spinner
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f6f6f6;
+
+        .loader-element {
+            transform: translateY(-50%);
+            top: 50%;
+            position: absolute;
+            width: calc(100% - 200px);
+            color:#9356DC;
+            padding: 0 100px;
+            text-align: center;
+
+            label {
+                font-size: 20px;
+                opacity: 0;
+                display:inline-block;
+            }
+        }
+  }
+
+@keyframes lol {
+    0% {
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    33% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    66% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(300px);
+    }
+}
+
+@-webkit-keyframes lol {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-300px);
+    }
+    33% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+    66% {
+        opacity: 1;
+        -webkit-transform: translateX(0px);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateX(300px);
+    }
+}
+
+.loader-element label:nth-child(6) {
+-webkit-animation: lol 3s ease-in-out;
+animation: lol 3s ease-in-out;
+}
+
+.loader-element label:nth-child(5) {
+-webkit-animation: lol 3s 100ms ease-in-out;
+animation: lol 3s 100ms ease-in-out;
+}
+
+.loader-element label:nth-child(4) {
+-webkit-animation: lol 3s 200ms  ease-in-out;
+animation: lol 3s 200ms ease-in-out;
+}
+
+.loader-element label:nth-child(3) {
+-webkit-animation: lol 3s 300ms ease-in-out;
+animation: lol 3s 300ms ease-in-out;
+}
+
+.loader-element label:nth-child(2) {
+-webkit-animation: lol 3s 400ms ease-in-out;
+animation: lol 3s 400ms ease-in-out;
+}
+
+.loader-element label:nth-child(1) {
+-webkit-animation: lol 3s 500ms ease-in-out;
+animation: lol 3s 500ms ease-in-out;
+}
+*/
