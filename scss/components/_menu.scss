@@ -1,0 +1,95 @@
+.container-menu {
+    margin-top: -12%;
+    width: 100%;
+    background-color: $color-back;
+    position: relative;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    .restaurant {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+
+        .title-restaurant {
+            font-family: shrikhand;
+            margin-left: 5px;
+        }
+
+        .like-restaurant {
+            margin-top: 6%;
+            margin-left: 40%;
+        }
+    }
+
+    .menu {
+
+        .partie2{
+            margin-top: 10%;
+        }
+
+        .partie3{
+            margin-top: 10%;
+        }
+
+        .title-menu {
+            font-weight: lighter;
+            font-size: 13px;
+            text-decoration: underline $color-tertiary;
+            /*border-bottom: 2px #99E2D0 solid;
+            voir pour réduire la taille de la bordure*/
+            margin-left: 5px;
+        }
+
+        .card-body-menu {
+            background-color: $color-back-bis;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px $color-shadow-ter;
+            margin-right:5px;
+
+            .card-title-menu {
+                padding-left: 10px;
+                padding-top: 10px;
+            }
+
+            .card-text-menu {
+                padding-left: 10px;
+                margin-top: -15px;
+                padding-bottom: 10px;
+                font-size: 11px;
+
+                    span {
+                        font-size: 11px;
+                        font-weight: bolder;
+                        /*gérer l'espace entre le texte et le prix*/
+                    }
+            }
+
+
+        }
+
+    }
+
+    .validation {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: $color-tertiary;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-left: 75%;
+        margin-top: -18%;
+
+        i {
+            background-color: $color-back-bis;
+            font-size: 10px;
+            color: $color-tertiary;
+            padding: 3px;
+            border-radius: 100%;
+            margin-left: 40%;
+            margin-top: 20%;
+            margin-bottom: 20%;
+        }
+    }
+
+}
