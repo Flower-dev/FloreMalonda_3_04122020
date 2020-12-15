@@ -430,20 +430,39 @@ de la largeur de la page*/
   box-shadow: 5px 5px 5px #EAEAEA;
   margin-right: 5px;
 }
-.container-menu .menu .card-title-menu {
+.container-menu .menu .card-body-menu .card-title-menu {
   padding-left: 10px;
   padding-top: 10px;
 }
-.container-menu .menu .card-text-menu {
+.container-menu .menu .card-body-menu .card-text-menu {
   padding-left: 10px;
   margin-top: -15px;
   padding-bottom: 10px;
   font-size: 11px;
 }
-.container-menu .menu .card-text-menu span {
+.container-menu .menu .card-body-menu .card-text-menu span {
   font-size: 11px;
   font-weight: bolder;
   /*gérer l'espace entre le texte et le prix*/
+}
+.container-menu .validation {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: #99E2D0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-left: 75%;
+  margin-top: -18%;
+}
+.container-menu .validation i {
+  background-color: white;
+  font-size: 10px;
+  color: #99E2D0;
+  padding: 3px;
+  border-radius: 100%;
+  margin-left: 40%;
+  margin-top: 20%;
+  margin-bottom: 20%;
 }
 .container-menu .bouton-commande {
   margin-top: 30px;
