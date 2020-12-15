@@ -523,6 +523,89 @@ footer a {
   margin-bottom: 20%;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .container-menu {
+    margin-top: -12%;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /*
+        .validation {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: $color-tertiary;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin-left: 75%;
+            margin-top: -18%;
+
+            i {
+                background-color: $color-back-bis;
+                font-size: 10px;
+                color: $color-tertiary;
+                padding: 3px;
+                border-radius: 100%;
+                margin-left: 40%;
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+        }*/
+  }
+  .container-menu .restaurant {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .container-menu .restaurant .title-restaurant {
+    font-family: shrikhand;
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  .container-menu .restaurant .like-restaurant {
+    margin-top: 5;
+    margin-left: 50%;
+  }
+  .container-menu .menu .partie2 {
+    margin-top: 10%;
+  }
+  .container-menu .menu .partie3 {
+    margin-top: 10%;
+  }
+  .container-menu .menu .title-menu {
+    font-weight: lighter;
+    font-size: 13px;
+    text-decoration: underline #99E2D0;
+    /*border-bottom: 2px #99E2D0 solid;
+    voir pour réduire la taille de la bordure*/
+    margin-left: 5px;
+  }
+  .container-menu .menu .card-body-menu {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #EAEAEA;
+    margin-right: 5px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .container-menu .menu .card-body-menu .card-title-menu {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .container-menu .menu .card-body-menu .card-text-menu {
+    padding-left: 10px;
+    margin-top: -15px;
+    padding-bottom: 10px;
+    font-size: 11px;
+  }
+  .container-menu .menu .card-body-menu .card-text-menu span {
+    font-size: 11px;
+    font-weight: bolder;
+    /*gérer l'espace entre le texte et le prix*/
+  }
+}
 .load {
   width: 10vh;
   height: 7.5vh;
