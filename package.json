@@ -1,0 +1,24 @@
+{
+  "name": "FloreMalonda_3_04122020",
+  "version": "1.0.0",
+  "description": "Deuxième projet réalisé dans le cadre de mon parcours Développeur d'applications Front-end en alternance avec OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/main.scss css/custom.css",
+    "dev": "sass scss/main.scss css/custom.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Flower-dev/FloreMalonda_3_04122020.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Flower-dev/FloreMalonda_3_04122020/issues"
+  },
+  "homepage": "https://github.com/Flower-dev/FloreMalonda_3_04122020#readme",
+  "dependencies": {
+    "sass": "^1.30.0"
+  }
+}

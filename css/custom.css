@@ -20,6 +20,50 @@ body {
   background-color: #f6f6f6;
 }
 
+.container-width {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.block-filter {
+  display: flex;
+  flex-direction: row;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.block-filter .filtres {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f6f6f6;
+  box-shadow: 5px 5px 5px #d5d5d5;
+  border-radius: 10px;
+  padding: 10px;
+  width: 90%;
+}
+.block-filter .filtres :active {
+  background-color: #c697ff;
+}
+.block-filter .filtres a {
+  text-decoration: none;
+  color: #353535;
+  /*attention à la couleur de la font qui n'est pas noir*/
+  font-size: 11px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+.block-filter .filtres .infographie i {
+  color: #353535;
+  /*changer la couleur par défaut
+  ne pas oublier que i doit changer de couleur à la selection du filtre*/
+}
+.block-filter .filtres .infographie i :hover {
+  color: #9356DC;
+}
+
 /* gérer pour faire du sass propre
 $color-back:#f6f6f6;
 $color-primary:#9356DC;
@@ -120,12 +164,6 @@ animation: lol 3s 400ms ease-in-out;
 animation: lol 3s 500ms ease-in-out;
 }
 */
-.container-width {
-  max-width: 1120px;
-  margin: auto;
-  padding: 0 10px;
-}
-
 .logo {
   text-align: center;
   background-color: white;
@@ -141,7 +179,7 @@ animation: lol 3s 500ms ease-in-out;
   background-color: #eaeaea;
   padding-top: 10px;
   padding-bottom: 10px;
-  /*ne pas oublier de mettre l'ombre (gris foncé) en position top 
+  /*ne pas oublier de mettre l'ombre (gris foncé) en position top
   attention doit se trouver à l'interieur du container*/
 }
 .container .searchbar {
@@ -185,7 +223,7 @@ animation: lol 3s 500ms ease-in-out;
 }
 .container0 .bouton1:hover {
   background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
-  /*jouer sur la saturation 
+  /*jouer sur la saturation
   des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
   box-shadow: 5px 5px 5px #b8b8b8;
   /*ombre portée plus visible*/
@@ -220,8 +258,9 @@ animation: lol 3s 500ms ease-in-out;
   border-radius: 10px;
   padding: 10px;
   width: 90%;
+  transition: background-color 0.25s ease;
 }
-.block-filter .filtres :active {
+.block-filter .filtres:hover {
   background-color: #c697ff;
 }
 .block-filter .filtres a {
@@ -237,12 +276,12 @@ animation: lol 3s 500ms ease-in-out;
   /*changer la couleur par défaut
   ne pas oublier que i doit changer de couleur à la selection du filtre*/
 }
-.block-filter .filtres .infographie i :hover {
+.block-filter .filtres .infographie i:hover {
   color: #9356DC;
 }
 
 /*Remarque générale : pour le moment le :hover sur les filtres ne fonctionne pas
-correctement à revoir tout comme le :hover sur les icones qui devait changer en 
+correctement à revoir tout comme le :hover sur les icones qui devait changer en
 meme temps que le filtres*/
 .bulle {
   background-color: #9356DC;
@@ -264,7 +303,7 @@ meme temps que le filtres*/
 }
 
 /*partie des restaurants*/
-/*trouver une solution pour que l'intégralité 
+/*trouver une solution pour que l'intégralité
 des cartes soit clicable*/
 /*ne pas oublier de jouer sur les padding*/
 .container2 {
@@ -330,8 +369,8 @@ des cartes soit clicable*/
 }
 .container2 .block-card .contenu .card-body .like:active {
   color: #FF79DA;
-  /*pour le 
-  moment au clic - changement de couleur 
+  /*pour le
+  moment au clic - changement de couleur
   pour la bordure - voir pour remplir l'interieur du coeur
   avec un dégradé de couleurs*/
 }
@@ -386,7 +425,7 @@ footer a {
   padding: 0;
 }
 
-/*régler la taille de l'image pour qu'elle fasse 100% 
+/*régler la taille de l'image pour qu'elle fasse 100%
 de la largeur de la page*/
 .container-menu {
   margin-top: -12%;
@@ -484,7 +523,7 @@ de la largeur de la page*/
 }
 .container-menu .bouton-commande .bouton1-commande:hover {
   background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
-  /*jouer sur la saturation 
+  /*jouer sur la saturation
   des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
   box-shadow: 5px 5px 5px #b8b8b8;
   /*ombre portée plus visible*/

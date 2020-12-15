@@ -1,25 +1,9 @@
 /*ce qui s'applique à l'ensemble du site - style général*/
+@import "global/variables";
+@import "global/layout";
+@import "components/filters";
 
-* {
-    box-sizing: border-box;
-}
 
-html {
-    font-family: "Roboto";
-
-    p {
-        font-size: 12px;
-    }
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background-color: #f6f6f6;
-}
 
 /* gérer pour faire du sass propre
 $color-back:#f6f6f6;
@@ -124,12 +108,6 @@ animation: lol 3s 500ms ease-in-out;
 }
 */
 
-.container-width {
-    max-width: 1120px;
-    margin: auto;
-    padding: 0 10px;
-}
-
 .logo {
     text-align: center;
     background-color: white;
@@ -146,10 +124,10 @@ animation: lol 3s 500ms ease-in-out;
     background-color: #eaeaea;
     padding-top: 10px;
     padding-bottom: 10px;
-/*ne pas oublier de mettre l'ombre (gris foncé) en position top 
-attention doit se trouver à l'interieur du container*/   
+/*ne pas oublier de mettre l'ombre (gris foncé) en position top
+attention doit se trouver à l'interieur du container*/
     .searchbar {
-        width: 100%; 
+        width: 100%;
         border:none;
         text-align: center;
 
@@ -182,9 +160,9 @@ attention doit se trouver à l'interieur du container*/
         margin-top: 30px;
         margin-bottom: 35px;
     }
-    
+
     .bouton1 {
-        text-decoration: none; 
+        text-decoration: none;
         background: linear-gradient(to bottom right, #FF79DA, #9356DC);
         box-shadow: 5px 5px 5px #d5d5d5;
         color: white;
@@ -194,7 +172,7 @@ attention doit se trouver à l'interieur du container*/
         font-size: 11px;
 
         &:hover {
-            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation 
+            background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
             des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
             box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
         }
@@ -231,11 +209,12 @@ attention doit se trouver à l'interieur du container*/
         border-radius: 10px;
         padding: 10px;
         width: 90%;
+        transition: background-color .250s ease;
 
-        :active {
+        &:hover {
             background-color: #c697ff;
         }
-    
+
         a {
             text-decoration: none;
             color: #353535; /*attention à la couleur de la font qui n'est pas noir*/
@@ -243,20 +222,20 @@ attention doit se trouver à l'interieur du container*/
             font-weight: bold;
             padding-right: 10px;
         }
-    
+
         .infographie i {
             color: #353535; /*changer la couleur par défaut
             ne pas oublier que i doit changer de couleur à la selection du filtre*/
-        
-            :hover{
-                color: #9356DC;  
+
+            &:hover{
+                color: #9356DC;
             }
         }
     }
 }
 
 /*Remarque générale : pour le moment le :hover sur les filtres ne fonctionne pas
-correctement à revoir tout comme le :hover sur les icones qui devait changer en 
+correctement à revoir tout comme le :hover sur les icones qui devait changer en
 meme temps que le filtres*/
 
 .bulle {
@@ -267,7 +246,7 @@ meme temps que le filtres*/
     height: 17px;
     text-align: center;
     font-size: 7px;
-    color: white; 
+    color: white;
     margin-top: 11px;
     margin-left: -6px;
     position:absolute;
@@ -282,7 +261,7 @@ meme temps que le filtres*/
 
 /*partie des restaurants*/
 
-/*trouver une solution pour que l'intégralité 
+/*trouver une solution pour que l'intégralité
 des cartes soit clicable*/
 /*ne pas oublier de jouer sur les padding*/
 
@@ -295,7 +274,7 @@ des cartes soit clicable*/
     }
 
     .block-card {
-        
+
         a {
             text-decoration: none;
             color: black;
@@ -310,8 +289,8 @@ des cartes soit clicable*/
             margin-bottom: 20px;
             margin-left: 10px;
             height: 45%;
-        
-            
+
+
             .card-img-top {
                 background-size: cover;
                 object-fit: cover;
@@ -320,53 +299,53 @@ des cartes soit clicable*/
                 width: 100%;
                 height: 150px;
             }
-            
+
             .new {
                 position:absolute;
                 z-index: 3;
                 margin-top: -38%;
                 margin-left: 74%;
                 background-color: #99E2D0;
-        
+
                 .new1 {
                     color: #39a98e;
                     padding: 5px;
                     margin: -2px;
                 }
             }
-            
+
             .block-card a {
                 text-decoration: none;
                 color: black;
             }
-            
+
             .card-body {
                 margin-left: 20px;
                 margin-bottom: 25px;
                 margin-top: -5px;
-        
+
                 .card-text {
                     margin-top: -5px;
                     padding-bottom: 10px;
                 }
-        
+
                 .like {
                     display: flex;
                     justify-content: flex-end;
                     margin-right: 15px;
                     margin-top: -40px;
                     margin-bottom: 15px;
-    
+
                     &:active {
-                        color : #FF79DA; /*pour le 
-                        moment au clic - changement de couleur 
+                        color : #FF79DA; /*pour le
+                        moment au clic - changement de couleur
                         pour la bordure - voir pour remplir l'interieur du coeur
                         avec un dégradé de couleurs*/
                     }
                 }
             }
-        } 
-    }   
+        }
+    }
 }
 
 /*partie footer - identique pour l'ensemble des pages du site*/
@@ -425,7 +404,7 @@ footer {
         width: 100%;
         padding: 0;
     }
-} /*régler la taille de l'image pour qu'elle fasse 100% 
+} /*régler la taille de l'image pour qu'elle fasse 100%
 de la largeur de la page*/
 
 .container-menu {
@@ -458,11 +437,11 @@ de la largeur de la page*/
         .partie2{
             margin-top: 10%;
         }
-    
+
         .partie3{
             margin-top: 10%;
         }
-    
+
         .title-menu {
             font-weight: lighter;
             font-size: 13px;
@@ -471,7 +450,7 @@ de la largeur de la page*/
             voir pour réduire la taille de la bordure*/
             margin-left: 5px;
         }
-    
+
         .card-body-menu {
             background-color: white;
             border-radius: 15px;
@@ -482,13 +461,13 @@ de la largeur de la page*/
                 padding-left: 10px;
                 padding-top: 10px;
             }
-        
+
             .card-text-menu {
                 padding-left: 10px;
                 margin-top: -15px;
                 padding-bottom: 10px;
                 font-size: 11px;
-        
+
                     span {
                         font-size: 11px;
                         font-weight: bolder;
@@ -496,9 +475,9 @@ de la largeur de la page*/
                     }
             }
 
-            
+
         }
-    
+
     }
 
     .validation {
@@ -526,9 +505,9 @@ de la largeur de la page*/
         margin-top: 30px;
         margin-bottom: 35px;
         margin-left: 30%;
-    
+
         .bouton1-commande {
-            text-decoration: none; 
+            text-decoration: none;
             background: linear-gradient(to bottom right, #FF79DA, #9356DC);
             box-shadow: 5px 5px 5px #d5d5d5;
             border: none;
@@ -539,10 +518,10 @@ de la largeur de la page*/
             padding-left: 30px;
             padding-right: 30px;
             font-size: 11px;
-    
-    
+
+
             &:hover {
-                background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation 
+                background: linear-gradient(to bottom right, #ffa8e7, #c697ff); /*jouer sur la saturation
                 des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
                 box-shadow: 5px 5px 5px #b8b8b8; /*ombre portée plus visible*/
             }
