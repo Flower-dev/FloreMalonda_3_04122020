@@ -74,3 +74,70 @@
       margin-top: -1px;
   }
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1350px){
+
+  .block-filter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  
+    .filtres {
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $color-back;
+        box-shadow: 5px 5px 5px $color-shadow;
+        border-radius: 10px;
+        padding: 10px;
+        width: 55%;
+        transition: background-color .250s ease;
+  
+        &:hover {
+            background-color: $color-primary-bis;
+        }
+  
+        a {
+            text-decoration: none;
+            color: $color-footer; /*attention à la couleur de la font qui n'est pas noir*/
+            font-size: 11px;
+            font-weight: bold;
+            padding-right: 10px;
+        }
+  
+        .infographie i {
+            color: $color-footer; /*changer la couleur par défaut
+            ne pas oublier que i doit changer de couleur à la selection du filtre*/
+  
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+  }
+  
+  .bulle {
+    background-color: $color-primary;
+    display: inline-block;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    font-size: 7px;
+    color: $color-font-bis;
+    margin-top: 11px;
+    margin-left: -6px;
+    position:absolute;
+    z-index: 3;
+  
+  
+    p {
+        padding-top: 3px;
+        margin-top: -1px;
+    }
+  }
+}
