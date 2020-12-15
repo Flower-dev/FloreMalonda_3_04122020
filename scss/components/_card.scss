@@ -49,11 +49,6 @@
                 }
             }
 
-            .block-card a {
-                text-decoration: none;
-                color: $color-font;
-            }
-
             .card-body {
                 margin-left: 20px;
                 margin-bottom: 25px;
@@ -76,6 +71,101 @@
                         moment au clic - changement de couleur
                         pour la bordure - voir pour remplir l'interieur du coeur
                         avec un dégradé de couleurs*/
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1350px){
+
+    .container2 {
+        width: 100%;
+    
+        .restaurant-title {
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+    
+        .block-card {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+    
+                a {
+                    text-decoration: none;
+                    color: $color-font;
+                }
+
+            .card-part1 {
+                width: 100%;
+                margin-bottom: 40px;
+                margin-left: 15px;
+            }
+
+            .card-part2 {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+    
+            .contenu {
+                box-sizing: border-box;
+                background-color: $color-back-bis;
+                border-radius: 15px;
+                box-shadow: 5px 5px 5px $color-shadow-ter;
+                width: 90%;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                height: 50%;
+    
+    
+                .card-img-top {
+                    background-size: cover;
+                    object-fit: cover;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    width: 100%;
+                    height: 150px;
+                }
+    
+                .new {
+                    position:absolute;
+                    z-index: 3;
+                    margin-top: -18%;
+                    margin-left: 34%;
+                    background-color: $color-tertiary;
+    
+                    .new1 {
+                        color: $color-tertiary-bis;
+                        padding: 5px;
+                        margin: -2px;
+                    }
+                }
+
+                .card-body {
+                    margin-left: 20px;
+                    margin-bottom: 25px;
+                    margin-top: -5px;
+    
+                    .card-text {
+                        margin-top: -5px;
+                        padding-bottom: 10px;
+                    }
+    
+                    .like {
+                        display: flex;
+                        justify-content: flex-end;
+                        margin-left: -30%;
+                        margin-top: -40px;
+                        margin-bottom: 15px;
+    
+                        &:active {
+                            color : $color-secondary; /*pour le
+                            moment au clic - changement de couleur
+                            pour la bordure - voir pour remplir l'interieur du coeur
+                            avec un dégradé de couleurs*/
+                        }
                     }
                 }
             }
