@@ -725,62 +725,89 @@ footer a {
   margin-top: 6%;
   margin-left: 40%;
 }
+.container-menu .menu .partie1 {
+  margin-bottom: 10%;
+}
 .container-menu .menu .partie2 {
-  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .container-menu .menu .partie3 {
-  margin-top: 10%;
+  margin-bottom: 10%;
 }
 .container-menu .menu .title-menu {
   font-weight: lighter;
   font-size: 13px;
   text-decoration: underline #99E2D0;
-  /*border-bottom: 2px #99E2D0 solid;
-  voir pour réduire la taille de la bordure*/
   margin-left: 5px;
 }
-.container-menu .menu .card-body-menu {
+.container-menu .menu .card-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 98%;
+  height: 30%;
+  flex-wrap: nowrap;
   background-color: white;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #EAEAEA;
-  margin-right: 5px;
+  margin-bottom: 20px;
+  margin-left: 5px;
 }
-.container-menu .menu .card-body-menu .card-title-menu {
+.container-menu .menu .card-menu .card-body-menu .card-title-menu {
   padding-left: 10px;
-  padding-top: 10px;
+  margin-bottom: -1%;
+  font-size: 12px;
 }
-.container-menu .menu .card-body-menu .card-text-menu {
+.container-menu .menu .card-menu .card-body-menu .card-text-menu {
   padding-left: 10px;
-  margin-top: -15px;
-  padding-bottom: 10px;
   font-size: 11px;
 }
-.container-menu .menu .card-body-menu .card-text-menu span {
+.container-menu .menu .card-menu .card-body-menu .card-text-menu span {
   font-size: 11px;
   font-weight: bolder;
-  margin-left: 80%;
-  margin-top: -80%;
-  margin-bottom: 15px;
+  padding-left: 10px;
   /*gérer l'espace entre le texte et le prix*/
 }
-.container-menu .validation {
-  display: flex;
-  flex-wrap: nowrap;
-  background-color: #99E2D0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  margin-left: 75%;
-  margin-top: -18%;
-}
-.container-menu .validation i {
+.container-menu .menu .card-menu .progress__bar i {
   background-color: white;
   font-size: 10px;
   color: #99E2D0;
   padding: 3px;
   border-radius: 100%;
+  margin-top: 45%;
+  margin-bottom: 45%;
   margin-left: 40%;
-  margin-top: 20%;
-  margin-bottom: 20%;
+}
+.container-menu .menu .card-menu .progress__bar i:active {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
+}
+.container-menu .menu .card-menu .progress__bar::before {
+  visibility: hidden;
+}
+.container-menu .menu .card-menu .progress__bar::after {
+  visibility: visible;
+}
+.container-menu .menu .card-menu .progress__bar:active {
+  background-color: #99E2D0;
+  width: 20%;
+  height: 100%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  transform: scaleX(1);
+  animation-name: progress-bar;
+  animation-duration: 1000ms;
+}
+@keyframes progress-bar {
+  0% {
+    transform: scaleX(0);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1350px) {
@@ -792,27 +819,6 @@ footer a {
     z-index: 3;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    /*
-        .validation {
-            display: flex;
-            flex-wrap: nowrap;
-            background-color: $color-tertiary;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            margin-left: 75%;
-            margin-top: -18%;
-
-            i {
-                background-color: $color-back-bis;
-                font-size: 10px;
-                color: $color-tertiary;
-                padding: 3px;
-                border-radius: 100%;
-                margin-left: 40%;
-                margin-top: 20%;
-                margin-bottom: 20%;
-            }
-        }*/
   }
   .container-menu .restaurant {
     display: flex;
@@ -821,50 +827,95 @@ footer a {
   }
   .container-menu .restaurant .title-restaurant {
     font-family: shrikhand;
-    margin-left: 20px;
-    font-size: 25px;
+    margin-left: 5px;
   }
   .container-menu .restaurant .like-restaurant {
-    margin-top: 5;
-    margin-left: 50%;
+    margin-top: 3%;
+    margin-left: 70%;
+  }
+  .container-menu .menu .partie1 {
+    margin-bottom: 10%;
   }
   .container-menu .menu .partie2 {
-    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .container-menu .menu .partie3 {
-    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .container-menu .menu .title-menu {
     font-weight: lighter;
     font-size: 13px;
     text-decoration: underline #99E2D0;
-    /*border-bottom: 2px #99E2D0 solid;
-    voir pour réduire la taille de la bordure*/
-    margin-left: 5px;
     text-align: center;
   }
-  .container-menu .menu .card-body-menu {
+  .container-menu .menu .card-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 30%;
+    flex-wrap: nowrap;
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #EAEAEA;
-    margin-right: 5px;
-    width: 50%;
+    margin-bottom: 20px;
     margin-left: 25%;
   }
-  .container-menu .menu .card-body-menu .card-title-menu {
+  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
     padding-left: 10px;
-    padding-top: 10px;
+    margin-bottom: -1%;
+    font-size: 12px;
   }
-  .container-menu .menu .card-body-menu .card-text-menu {
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
     padding-left: 10px;
-    margin-top: -15px;
-    padding-bottom: 10px;
     font-size: 11px;
   }
-  .container-menu .menu .card-body-menu .card-text-menu span {
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
     font-size: 11px;
     font-weight: bolder;
+    padding-left: 10px;
     /*gérer l'espace entre le texte et le prix*/
+  }
+  .container-menu .menu .card-menu .progress__bar i {
+    background-color: white;
+    font-size: 10px;
+    color: #99E2D0;
+    padding: 3px;
+    border-radius: 100%;
+    margin-top: 45%;
+    margin-bottom: 45%;
+    margin-left: 40%;
+  }
+  .container-menu .menu .card-menu .progress__bar i:active {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+  }
+  .container-menu .menu .card-menu .progress__bar::before {
+    visibility: hidden;
+  }
+  .container-menu .menu .card-menu .progress__bar::after {
+    visibility: visible;
+  }
+  .container-menu .menu .card-menu .progress__bar:active {
+    background-color: #99E2D0;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: scaleX(1);
+    animation-name: progress-bar;
+    animation-duration: 1000ms;
+  }
+  @keyframes progress-bar {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(0.5);
+    }
+    100% {
+      transform: scaleX(1);
+    }
   }
 }
 @media screen and (min-width: 1350px) and (max-width: 1650px) {
@@ -876,27 +927,6 @@ footer a {
     z-index: 3;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    /*
-        .validation {
-            display: flex;
-            flex-wrap: nowrap;
-            background-color: $color-tertiary;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            margin-left: 75%;
-            margin-top: -18%;
-
-            i {
-                background-color: $color-back-bis;
-                font-size: 10px;
-                color: $color-tertiary;
-                padding: 3px;
-                border-radius: 100%;
-                margin-left: 40%;
-                margin-top: 20%;
-                margin-bottom: 20%;
-            }
-        }*/
   }
   .container-menu .restaurant {
     display: flex;
@@ -905,88 +935,140 @@ footer a {
   }
   .container-menu .restaurant .title-restaurant {
     font-family: shrikhand;
-    margin-left: 20px;
-    font-size: 25px;
+    margin-left: 5px;
   }
   .container-menu .restaurant .like-restaurant {
     margin-top: 3%;
-    margin-left: 65%;
+    margin-left: 70%;
+  }
+  .container-menu .menu .partie1 {
+    margin-bottom: 10%;
   }
   .container-menu .menu .partie2 {
-    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .container-menu .menu .partie3 {
-    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .container-menu .menu .title-menu {
     font-weight: lighter;
     font-size: 13px;
     text-decoration: underline #99E2D0;
-    /*border-bottom: 2px #99E2D0 solid;
-    voir pour réduire la taille de la bordure*/
-    margin-left: 5px;
     text-align: center;
   }
-  .container-menu .menu .card-body-menu {
+  .container-menu .menu .card-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 30%;
+    flex-wrap: nowrap;
     background-color: white;
     border-radius: 15px;
     box-shadow: 5px 5px 5px #EAEAEA;
-    margin-right: 5px;
-    width: 50%;
+    margin-bottom: 20px;
     margin-left: 25%;
   }
-  .container-menu .menu .card-body-menu .card-title-menu {
+  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
     padding-left: 10px;
-    padding-top: 10px;
+    margin-bottom: -1%;
+    font-size: 12px;
   }
-  .container-menu .menu .card-body-menu .card-text-menu {
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
     padding-left: 10px;
-    margin-top: -15px;
-    padding-bottom: 10px;
     font-size: 11px;
   }
-  .container-menu .menu .card-body-menu .card-text-menu span {
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
     font-size: 11px;
     font-weight: bolder;
+    padding-left: 10px;
     /*gérer l'espace entre le texte et le prix*/
   }
+  .container-menu .menu .card-menu .progress__bar i {
+    background-color: white;
+    font-size: 10px;
+    color: #99E2D0;
+    padding: 3px;
+    border-radius: 100%;
+    margin-top: 45%;
+    margin-bottom: 45%;
+    margin-left: 40%;
+  }
+  .container-menu .menu .card-menu .progress__bar i:active {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+  }
+  .container-menu .menu .card-menu .progress__bar::before {
+    visibility: hidden;
+  }
+  .container-menu .menu .card-menu .progress__bar::after {
+    visibility: visible;
+  }
+  .container-menu .menu .card-menu .progress__bar:active {
+    background-color: #99E2D0;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: scaleX(1);
+    animation-name: progress-bar;
+    animation-duration: 1000ms;
+  }
+  @keyframes progress-bar {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(0.5);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
 }
-.load {
-  width: 10vh;
-  height: 7.5vh;
-  display: flex;
-  justify-content: space-evenly;
-}
-.load__bar {
-  background-color: #9356DC;
-  height: 100%;
-  width: 1vh;
-  animation: bars 1000ms backwards infinite ease-in-out alternate;
-  animation-direction: alternate;
-}
-.load__bar--1 {
-  animation-delay: 200ms;
-}
-.load__bar--2 {
-  animation-delay: 400ms;
-}
-.load__bar--3 {
-  animation-delay: 600ms;
-}
-.load__bar--4 {
-  animation-delay: 800ms;
-}
-.load__bar--5 {
-  animation-delay: 1000ms;
+.loader {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  text-align: justify;
 }
 
-@keyframes bars {
+.custom-loading-spinner {
+  cursor: progress;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.custom-loading-spinner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+  overflow: hidden;
+}
+.custom-loading-spinner::after {
+  box-sizing: border-box;
+  z-index: 10002;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 0 -25px;
+  border: 2px solid #ffa8e7;
+  border-top: 3px solid #9356DC;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: custom-loading 1s linear infinite;
+}
+
+@keyframes custom-loading {
   0% {
-    transform: scaleY(0.5);
-    /*permet d'animer les barres sur l'échelle verticale*/
+    transform: rotate(0deg);
   }
   100% {
-    transform: scaleY(1);
+    transform: rotate(360deg);
   }
 }
 
