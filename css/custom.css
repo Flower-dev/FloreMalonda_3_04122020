@@ -802,11 +802,230 @@ footer a {
   0% {
     transform: scaleX(0);
   }
+  50% {
+    transform: scaleX(0.5);
+  }
   100% {
     transform: scaleX(1);
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .container-menu {
+    margin-top: -12%;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .container-menu .restaurant {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .container-menu .restaurant .title-restaurant {
+    font-family: shrikhand;
+    margin-left: 5px;
+  }
+  .container-menu .restaurant .like-restaurant {
+    margin-top: 3%;
+    margin-left: 70%;
+  }
+  .container-menu .menu .partie1 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .partie2 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .partie3 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .title-menu {
+    font-weight: lighter;
+    font-size: 13px;
+    text-decoration: underline #99E2D0;
+    text-align: center;
+  }
+  .container-menu .menu .card-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 30%;
+    flex-wrap: nowrap;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #EAEAEA;
+    margin-bottom: 20px;
+    margin-left: 25%;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
+    padding-left: 10px;
+    margin-bottom: -1%;
+    font-size: 12px;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
+    padding-left: 10px;
+    font-size: 11px;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
+    font-size: 11px;
+    font-weight: bolder;
+    padding-left: 10px;
+    /*gérer l'espace entre le texte et le prix*/
+  }
+  .container-menu .menu .card-menu .progress__bar i {
+    background-color: white;
+    font-size: 10px;
+    color: #99E2D0;
+    padding: 3px;
+    border-radius: 100%;
+    margin-top: 45%;
+    margin-bottom: 45%;
+    margin-left: 40%;
+  }
+  .container-menu .menu .card-menu .progress__bar i:active {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+  }
+  .container-menu .menu .card-menu .progress__bar::before {
+    visibility: hidden;
+  }
+  .container-menu .menu .card-menu .progress__bar::after {
+    visibility: visible;
+  }
+  .container-menu .menu .card-menu .progress__bar:active {
+    background-color: #99E2D0;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: scaleX(1);
+    animation-name: progress-bar;
+    animation-duration: 1000ms;
+  }
+  @keyframes progress-bar {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(0.5);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .container-menu {
+    margin-top: -12%;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+  .container-menu .restaurant {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .container-menu .restaurant .title-restaurant {
+    font-family: shrikhand;
+    margin-left: 5px;
+  }
+  .container-menu .restaurant .like-restaurant {
+    margin-top: 3%;
+    margin-left: 70%;
+  }
+  .container-menu .menu .partie1 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .partie2 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .partie3 {
+    margin-bottom: 10%;
+  }
+  .container-menu .menu .title-menu {
+    font-weight: lighter;
+    font-size: 13px;
+    text-decoration: underline #99E2D0;
+    text-align: center;
+  }
+  .container-menu .menu .card-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    height: 30%;
+    flex-wrap: nowrap;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #EAEAEA;
+    margin-bottom: 20px;
+    margin-left: 25%;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
+    padding-left: 10px;
+    margin-bottom: -1%;
+    font-size: 12px;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
+    padding-left: 10px;
+    font-size: 11px;
+  }
+  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
+    font-size: 11px;
+    font-weight: bolder;
+    padding-left: 10px;
+    /*gérer l'espace entre le texte et le prix*/
+  }
+  .container-menu .menu .card-menu .progress__bar i {
+    background-color: white;
+    font-size: 10px;
+    color: #99E2D0;
+    padding: 3px;
+    border-radius: 100%;
+    margin-top: 45%;
+    margin-bottom: 45%;
+    margin-left: 40%;
+  }
+  .container-menu .menu .card-menu .progress__bar i:active {
+    transform: rotate(-360deg);
+    transition: transform 500ms ease-in-out;
+  }
+  .container-menu .menu .card-menu .progress__bar::before {
+    visibility: hidden;
+  }
+  .container-menu .menu .card-menu .progress__bar::after {
+    visibility: visible;
+  }
+  .container-menu .menu .card-menu .progress__bar:active {
+    background-color: #99E2D0;
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transform: scaleX(1);
+    animation-name: progress-bar;
+    animation-duration: 1000ms;
+  }
+  @keyframes progress-bar {
+    0% {
+      transform: scaleX(0);
+    }
+    50% {
+      transform: scaleX(0.5);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+}
 .loader {
   width: 100%;
   margin: 0 auto;
