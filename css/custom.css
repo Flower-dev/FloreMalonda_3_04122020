@@ -18,6 +18,8 @@ html, body {
 
 body {
   background-color: #f6f6f6;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .container-width {
@@ -54,6 +56,38 @@ body {
   color: black;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .logoinfographie {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+  }
+  .logoinfographie .infographie-fleche {
+    padding-top: 3%;
+    padding-left: 4%;
+  }
+  .logoinfographie .infographie-fleche a {
+    text-decoration: none;
+    color: black;
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .logoinfographie {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 100%;
+  }
+  .logoinfographie .infographie-fleche {
+    padding-top: 2%;
+    padding-left: 4%;
+  }
+  .logoinfographie .infographie-fleche a {
+    text-decoration: none;
+    color: black;
+  }
+}
 /*doit correspondre aux images qui se trouvent sur les pages menu*/
 .backgroundimage {
   width: 100%;
@@ -160,13 +194,27 @@ footer a {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1350px) {
-  .block-filter {
+  .container1 {
+    width: 100%;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .info-title {
+    text-align: center;
+  }
+
+  .info-filtres {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 15%;
+  }
+  .info-filtres .block-filter {
     display: flex;
     flex-direction: row;
-    margin-left: 15px;
-    margin-bottom: 15px;
   }
-  .block-filter .filtres {
+  .info-filtres .block-filter .filtres {
     margin-bottom: 15px;
     display: flex;
     flex-direction: row;
@@ -176,30 +224,32 @@ footer a {
     box-shadow: 5px 5px 5px #d5d5d5;
     border-radius: 10px;
     padding: 10px;
-    width: 55%;
+    width: 80%;
     transition: background-color 0.25s ease;
   }
-  .block-filter .filtres:hover {
+  .info-filtres .block-filter .filtres:hover {
     background-color: #c697ff;
   }
-  .block-filter .filtres a {
+  .info-filtres .block-filter .filtres a {
     text-decoration: none;
     color: #353535;
     /*attention à la couleur de la font qui n'est pas noir*/
     font-size: 11px;
     font-weight: bold;
     padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
   }
-  .block-filter .filtres .infographie i {
+  .info-filtres .block-filter .filtres .infographie i {
     color: #353535;
+    padding-left: 5px;
     /*changer la couleur par défaut
     ne pas oublier que i doit changer de couleur à la selection du filtre*/
   }
-  .block-filter .filtres .infographie i:hover {
+  .info-filtres .block-filter .filtres .infographie i:hover {
     color: #9356DC;
   }
-
-  .bulle {
+  .info-filtres .bulle {
     background-color: #9356DC;
     display: inline-block;
     border-radius: 100%;
@@ -208,12 +258,89 @@ footer a {
     text-align: center;
     font-size: 7px;
     color: white;
-    margin-top: 11px;
-    margin-left: -6px;
+    margin-top: 15px;
+    margin-left: -8px;
     position: absolute;
     z-index: 3;
   }
-  .bulle p {
+  .info-filtres .bulle p {
+    padding-top: 3px;
+    margin-top: -1px;
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .container1 {
+    width: 100%;
+    background-color: white;
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+
+  .info-title {
+    text-align: center;
+  }
+
+  .info-filtres {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 27%;
+  }
+  .info-filtres .block-filter {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+  .info-filtres .block-filter .filtres {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f6f6f6;
+    box-shadow: 5px 5px 5px #d5d5d5;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+    transition: background-color 0.25s ease;
+  }
+  .info-filtres .block-filter .filtres:hover {
+    background-color: #c697ff;
+  }
+  .info-filtres .block-filter .filtres a {
+    text-decoration: none;
+    color: #353535;
+    /*attention à la couleur de la font qui n'est pas noir*/
+    font-size: 11px;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+  }
+  .info-filtres .block-filter .filtres .infographie i {
+    color: #353535;
+    padding-left: 5px;
+    /*changer la couleur par défaut
+    ne pas oublier que i doit changer de couleur à la selection du filtre*/
+  }
+  .info-filtres .block-filter .filtres .infographie i:hover {
+    color: #9356DC;
+  }
+  .info-filtres .bulle {
+    background-color: #9356DC;
+    display: inline-block;
+    border-radius: 100%;
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    font-size: 7px;
+    color: white;
+    margin-top: 15px;
+    margin-left: -8px;
+    position: absolute;
+    z-index: 3;
+  }
+  .info-filtres .bulle p {
     padding-top: 3px;
     margin-top: -1px;
   }
@@ -237,6 +364,7 @@ footer a {
   border-radius: 30px;
   padding: 10px;
   font-size: 11px;
+  transition: background-color 0.25s ease;
 }
 .container0 .bouton1:hover {
   background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
@@ -264,6 +392,7 @@ footer a {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 11px;
+  transition: background-color 0.25s ease;
 }
 .bouton-commande .bouton1-commande:hover {
   background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
@@ -273,6 +402,62 @@ footer a {
   /*ombre portée plus visible*/
 }
 
+@media screen and (min-width: 768px) and (max-width: 1350px) {
+  .bouton-commande {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    margin-left: 42%;
+  }
+  .bouton-commande .bouton1-commande {
+    text-decoration: none;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    box-shadow: 5px 5px 5px #d5d5d5;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 11px;
+    transition: background-color 0.25s ease;
+  }
+  .bouton-commande .bouton1-commande:hover {
+    background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
+    /*jouer sur la saturation
+    des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+    box-shadow: 5px 5px 5px #b8b8b8;
+    /*ombre portée plus visible*/
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .bouton-commande {
+    margin-top: 30px;
+    margin-bottom: 35px;
+    margin-left: 45%;
+  }
+  .bouton-commande .bouton1-commande {
+    text-decoration: none;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    box-shadow: 5px 5px 5px #d5d5d5;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 11px;
+    transition: background-color 0.25s ease;
+  }
+  .bouton-commande .bouton1-commande:hover {
+    background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
+    /*jouer sur la saturation
+    des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+    box-shadow: 5px 5px 5px #b8b8b8;
+    /*ombre portée plus visible*/
+  }
+}
 /*partie des restaurants*/
 .container2 {
   width: 100%;
@@ -413,10 +598,82 @@ footer a {
   }
   .container2 .block-card .contenu .card-body .like:active {
     color: #FF79DA;
-    /*pour le
-    moment au clic - changement de couleur
-    pour la bordure - voir pour remplir l'interieur du coeur
-    avec un dégradé de couleurs*/
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .container2 {
+    width: 100%;
+  }
+  .container2 .restaurant-title {
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+  .container2 .block-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .container2 .block-card a {
+    text-decoration: none;
+    color: black;
+  }
+  .container2 .block-card .card-part1 {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-left: 15px;
+  }
+  .container2 .block-card .card-part2 {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .container2 .block-card .contenu {
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #EAEAEA;
+    width: 90%;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    height: 50%;
+  }
+  .container2 .block-card .contenu .card-img-top {
+    background-size: cover;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 100%;
+    height: 150px;
+  }
+  .container2 .block-card .contenu .new {
+    position: absolute;
+    z-index: 3;
+    margin-top: -10%;
+    margin-left: 29%;
+    background-color: #99E2D0;
+  }
+  .container2 .block-card .contenu .new .new1 {
+    color: #39a98e;
+    padding: 5px;
+    margin: -2px;
+  }
+  .container2 .block-card .contenu .card-body {
+    margin-left: 20px;
+    margin-bottom: 25px;
+    margin-top: -5px;
+  }
+  .container2 .block-card .contenu .card-body .card-text {
+    margin-top: -5px;
+    padding-bottom: 10px;
+  }
+  .container2 .block-card .contenu .card-body .like {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: -30%;
+    margin-top: -40px;
+    margin-bottom: 15px;
+  }
+  .container2 .block-card .contenu .card-body .like:active {
+    color: #FF79DA;
   }
 }
 .container {
@@ -581,6 +838,91 @@ footer a {
     /*border-bottom: 2px #99E2D0 solid;
     voir pour réduire la taille de la bordure*/
     margin-left: 5px;
+    text-align: center;
+  }
+  .container-menu .menu .card-body-menu {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px #EAEAEA;
+    margin-right: 5px;
+    width: 50%;
+    margin-left: 25%;
+  }
+  .container-menu .menu .card-body-menu .card-title-menu {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .container-menu .menu .card-body-menu .card-text-menu {
+    padding-left: 10px;
+    margin-top: -15px;
+    padding-bottom: 10px;
+    font-size: 11px;
+  }
+  .container-menu .menu .card-body-menu .card-text-menu span {
+    font-size: 11px;
+    font-weight: bolder;
+    /*gérer l'espace entre le texte et le prix*/
+  }
+}
+@media screen and (min-width: 1350px) and (max-width: 1650px) {
+  .container-menu {
+    margin-top: -12%;
+    width: 100%;
+    background-color: #f6f6f6;
+    position: relative;
+    z-index: 3;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    /*
+        .validation {
+            display: flex;
+            flex-wrap: nowrap;
+            background-color: $color-tertiary;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            margin-left: 75%;
+            margin-top: -18%;
+
+            i {
+                background-color: $color-back-bis;
+                font-size: 10px;
+                color: $color-tertiary;
+                padding: 3px;
+                border-radius: 100%;
+                margin-left: 40%;
+                margin-top: 20%;
+                margin-bottom: 20%;
+            }
+        }*/
+  }
+  .container-menu .restaurant {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+  .container-menu .restaurant .title-restaurant {
+    font-family: shrikhand;
+    margin-left: 20px;
+    font-size: 25px;
+  }
+  .container-menu .restaurant .like-restaurant {
+    margin-top: 3%;
+    margin-left: 65%;
+  }
+  .container-menu .menu .partie2 {
+    margin-top: 10%;
+  }
+  .container-menu .menu .partie3 {
+    margin-top: 10%;
+  }
+  .container-menu .menu .title-menu {
+    font-weight: lighter;
+    font-size: 13px;
+    text-decoration: underline #99E2D0;
+    /*border-bottom: 2px #99E2D0 solid;
+    voir pour réduire la taille de la bordure*/
+    margin-left: 5px;
+    text-align: center;
   }
   .container-menu .menu .card-body-menu {
     background-color: white;

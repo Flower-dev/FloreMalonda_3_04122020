@@ -17,6 +17,8 @@ html, body {
 
 body {
   background-color: $color-back;
+  max-width: 1120px;
+  margin: auto;
 }
 
 .container-width {
@@ -58,6 +60,45 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1350px){
+  .logoinfographie {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-back-bis;
+    width: 100%;
+  
+    .infographie-fleche {
+        padding-top: 3%;
+        padding-left: 4%;
+  
+        a {
+            text-decoration: none;
+            color: $color-font;
+        }
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1650px){
+  .logoinfographie {
+    display: flex;
+    flex-direction: row;
+    background-color: $color-back-bis;
+    width: 100%;
+  
+    .infographie-fleche {
+        padding-top: 2%;
+        padding-left: 4%;
+  
+        a {
+            text-decoration: none;
+            color: $color-font;
+        }
+    }
+  }
+}
+
+
 /*doit correspondre aux images qui se trouvent sur les pages menu*/
 
 .backgroundimage {
@@ -97,6 +138,7 @@ footer {
       font-size: 11px;
   }
 }
+
 
 /*attention contact doit renvoyer sur une adresse mail*/
 
