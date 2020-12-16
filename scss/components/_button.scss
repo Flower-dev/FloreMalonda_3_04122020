@@ -19,6 +19,7 @@
         border-radius: 30px;
         padding: 10px;
         font-size: 11px;
+        transition: background-color .250s ease;
 
         &:hover {
             background: linear-gradient(to bottom right, $color-secondary-bis, $color-primary-bis); /*jouer sur la saturation
@@ -47,6 +48,7 @@
         padding-left: 30px;
         padding-right: 30px;
         font-size: 11px;
+        transition: background-color .250s ease;
 
 
         &:hover {
@@ -55,4 +57,64 @@
             box-shadow: 5px 5px 5px $color-shadow-bis; /*ombre portée plus visible*/
         }
     }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1350px){
+    .bouton-commande {
+        margin-top: 30px;
+        margin-bottom: 35px;
+        margin-left: 42%;
+    
+        .bouton1-commande {
+            text-decoration: none;
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            box-shadow: 5px 5px 5px $color-shadow;
+            border: none;
+            color: $color-font-bis;
+            border-radius: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 11px;
+            transition: background-color .250s ease;
+    
+    
+            &:hover {
+                background: linear-gradient(to bottom right, $color-secondary-bis, $color-primary-bis); /*jouer sur la saturation
+                des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+                box-shadow: 5px 5px 5px $color-shadow-bis; /*ombre portée plus visible*/
+            }
+        }
+    } 
+}
+
+@media screen and (min-width: 1350px) and (max-width: 1650px){
+    .bouton-commande {
+        margin-top: 30px;
+        margin-bottom: 35px;
+        margin-left: 45%;
+    
+        .bouton1-commande {
+            text-decoration: none;
+            background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            box-shadow: 5px 5px 5px $color-shadow;
+            border: none;
+            color: $color-font-bis;
+            border-radius: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-size: 11px;
+            transition: background-color .250s ease;
+    
+    
+            &:hover {
+                background: linear-gradient(to bottom right, $color-secondary-bis, $color-primary-bis); /*jouer sur la saturation
+                des couleurs primaires et secondaires du site pour les rendre plus claires au passage de la souris*/
+                box-shadow: 5px 5px 5px $color-shadow-bis; /*ombre portée plus visible*/
+            }
+        }
+    } 
 }
