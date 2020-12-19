@@ -67,7 +67,8 @@
                     margin-bottom: 15px;
 
                     &:active {
-                        color : $color-secondary; /*pour le
+                        color : $color-secondary;
+                        transition: .250s ease-in-out; /*pour le
                         moment au clic - changement de couleur
                         pour la bordure - voir pour remplir l'interieur du coeur
                         avec un dégradé de couleurs*/

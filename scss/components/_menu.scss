@@ -20,21 +20,34 @@
         .like-restaurant {
             margin-top: 6%;
             margin-left: 40%;
+
+            &:hover {
+                color: $color-primary;
+                transition: .250s ease-in-out;
+            }
         }
     }
 
-    .menu {
+    .menu { /*pour faire apparaitre le menu au fur et à mesure jouer sur l'opacité et mettre une transition*/
+
+        @keyframes transition {
+            0%   { margin-top: -70px;opacity:0; }
+            100% { margin-bottom: 0;opacity:1; }
+        }
 
         .partie1 {
             margin-bottom: 10%;
+            opacity:0;animation: transition 1s ease-in-out 2s forwards;
         }
 
         .partie2 {
             margin-bottom: 10%;
+            opacity:0;animation: transition 2s ease-in-out 2s forwards;
         }
 
         .partie3 {
             margin-bottom: 10%;
+            opacity:0;animation: transition 3s ease-in-out 2s forwards;
         }
 
         .title-menu {
@@ -96,7 +109,7 @@
                 }  
                 
                 &::before {
-                    visibility: hidden;
+                    visibility: collapse;
                 }
 
                 &::after {
@@ -116,15 +129,8 @@
             }
 
             @keyframes progress-bar{
-                0% {
-                    transform: scaleX(0);
-                }
-                50% {
-                    transform: scaleX(0.5);
-                }
-                100% {
-                    transform: scaleX(1);
-                }
+                0%   { margin-right: 0px;opacity:0;}
+                100% { margin-left: 0;opacity:1;}
             }
         }
         
