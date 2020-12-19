@@ -392,7 +392,7 @@ footer a {
   padding-left: 30px;
   padding-right: 30px;
   font-size: 11px;
-  transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease-in-out;
 }
 .bouton-commande .bouton1-commande:hover {
   background: linear-gradient(to bottom right, #ffa8e7, #c697ff);
@@ -518,6 +518,7 @@ footer a {
 }
 .container2 .block-card .contenu .card-body .like:active {
   color: #FF79DA;
+  transition: 0.25s ease-in-out;
   /*pour le
   moment au clic - changement de couleur
   pour la bordure - voir pour remplir l'interieur du coeur
@@ -725,14 +726,37 @@ footer a {
   margin-top: 6%;
   margin-left: 40%;
 }
+.container-menu .restaurant .like-restaurant:hover {
+  color: #9356DC;
+  transition: 0.25s ease-in-out;
+}
+.container-menu .menu {
+  /*pour faire apparaitre le menu au fur et à mesure jouer sur l'opacité et mettre une transition*/
+}
+@keyframes transition {
+  0% {
+    margin-top: -70px;
+    opacity: 0;
+  }
+  100% {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
 .container-menu .menu .partie1 {
   margin-bottom: 10%;
+  opacity: 0;
+  animation: transition 1s ease-in-out 2s forwards;
 }
 .container-menu .menu .partie2 {
   margin-bottom: 10%;
+  opacity: 0;
+  animation: transition 2s ease-in-out 2s forwards;
 }
 .container-menu .menu .partie3 {
   margin-bottom: 10%;
+  opacity: 0;
+  animation: transition 3s ease-in-out 2s forwards;
 }
 .container-menu .menu .title-menu {
   font-weight: lighter;
@@ -783,7 +807,7 @@ footer a {
   transition: transform 500ms ease-in-out;
 }
 .container-menu .menu .card-menu .progress__bar::before {
-  visibility: hidden;
+  visibility: collapse;
 }
 .container-menu .menu .card-menu .progress__bar::after {
   visibility: visible;
@@ -800,13 +824,12 @@ footer a {
 }
 @keyframes progress-bar {
   0% {
-    transform: scaleX(0);
-  }
-  50% {
-    transform: scaleX(0.5);
+    margin-right: 0px;
+    opacity: 0;
   }
   100% {
-    transform: scaleX(1);
+    margin-left: 0;
+    opacity: 1;
   }
 }
 
@@ -1061,6 +1084,9 @@ footer a {
   width: 50px;
   height: 50px;
   animation: custom-loading 1s linear infinite;
+}
+.custom-loading-spinner:active {
+  visibility: hidden;
 }
 
 @keyframes custom-loading {
