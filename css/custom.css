@@ -461,16 +461,18 @@ footer a {
 /*partie des restaurants*/
 .container2 {
   width: 100%;
-}
-.container2 .card-header {
-  background-size: cover;
-  height: 150px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.container2 .card-header.lapalettedugout {
-  background-image: url("../img/restaurants/lapalettedugout.jpg");
+  /*.card-header {
+      background-size: cover;
+      height: 150px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.lapalettedugout {
+          background-image: url('../img/restaurants/lapalettedugout.jpg');
+      }
+  pour mettre une image en background - à utiliser pour les fiches restaurant
+  }*/
 }
 .container2 .restaurant-title {
   margin-top: 25px;
@@ -810,11 +812,10 @@ footer a {
   padding-left: 10px;
   font-size: 11px;
 }
-.container-menu .menu .card-menu .card-body-menu .card-text-menu span {
-  font-size: 11px;
-  font-weight: bolder;
-  padding-left: 10px;
-  /*gérer l'espace entre le texte et le prix*/
+.container-menu .menu .card-menu .card-body-menu .prix {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: -8px;
 }
 .container-menu .menu .card-menu .progress__bar {
   width: 30%;
