@@ -95,20 +95,18 @@
                 .card-text-menu {
                     padding-left: 10px;
                     font-size: 11px;
+                }
 
-                    span {
-                        font-size: 11px;
-                        font-weight: bolder;
-                        padding-left: 10px;
-                        /*gérer l'espace entre le texte et le prix*/
-                    }
+                .prix {
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-right: -8px;
                 }
             }
             .progress__bar {
 
                 width: 30%;
-                background: green;
-                color: white;
+                background: $color-tertiary;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -117,57 +115,32 @@
                 transform: translateX(101%);
                 transition: all .250s ease-out;
 
-                /*i {
+                i {
                     background-color: $color-back-bis;
                     font-size: 10px;
                     color: $color-tertiary;
                     padding: 3px;
                     border-radius: 100%;
-                    margin-top: 45%;
-                    margin-bottom: 45%;
-                    margin-left: 40%;
-
-                    &:active {
-                        transform: rotate(-360deg);
-                        transition: transform 500ms ease-in-out;
-                    }
                 }
-
-                &::before {
-                    visibility: collapse;
-                }
-
-                &::after {
-                    visibility: visible;
-                }
-
-                &:active {
-                    background-color: $color-tertiary;
-                    width: 20%;
-                    height: 100%;
-                    border-top-right-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                    transform: scaleX(1);
-                    animation-name: progress-bar;
-                    animation-duration: 1000ms;
-                }*/
             }
 
             &:hover {
                 .progress__bar{
                     transform: translateX(0);
                 }
+
+                i {
+                    transform: rotate(-360deg);
+                    transition: transform 500ms ease-in-out;
+                }
             }
 
-            @keyframes progress-bar{
-                0%   { margin-left: 0px;opacity:0;}
-                100% { margin-left: 0px;opacity:1;}
-            }
         }
 
     }
 }
 
+/*
 @media screen and (min-width: 768px) and (max-width: 1350px){
     .container-menu {
         margin-top: -12%;
@@ -244,11 +217,11 @@
                             font-size: 11px;
                             font-weight: bolder;
                             padding-left: 10px;
-                            /*gérer l'espace entre le texte et le prix*/
+                            
                         }
                     }
                 }
-                /*.progress__bar {
+                .progress__bar {
 
                     i {
                         background-color: $color-back-bis;
@@ -289,7 +262,7 @@
                 @keyframes progress-bar{
                     0%   { margin-left: 0px;opacity:0;}
                     100% { margin-left: 0px;opacity:1;}
-                }*/
+                }
             }
 
         }
@@ -372,7 +345,7 @@
                             font-size: 11px;
                             font-weight: bolder;
                             padding-left: 10px;
-                            /*gérer l'espace entre le texte et le prix*/
+                            /
                         }
                     }
                 }
@@ -423,3 +396,4 @@
         }
     }
 }
+*/

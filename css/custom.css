@@ -461,16 +461,18 @@ footer a {
 /*partie des restaurants*/
 .container2 {
   width: 100%;
-}
-.container2 .card-header {
-  background-size: cover;
-  height: 150px;
-  width: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.container2 .card-header.lapalettedugout {
-  background-image: url("../img/restaurants/lapalettedugout.jpg");
+  /*.card-header {
+      background-size: cover;
+      height: 150px;
+      width: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      &.lapalettedugout {
+          background-image: url('../img/restaurants/lapalettedugout.jpg');
+      }
+  pour mettre une image en background - à utiliser pour les fiches restaurant
+  }*/
 }
 .container2 .restaurant-title {
   margin-top: 25px;
@@ -810,16 +812,14 @@ footer a {
   padding-left: 10px;
   font-size: 11px;
 }
-.container-menu .menu .card-menu .card-body-menu .card-text-menu span {
-  font-size: 11px;
-  font-weight: bolder;
-  padding-left: 10px;
-  /*gérer l'espace entre le texte et le prix*/
+.container-menu .menu .card-menu .card-body-menu .prix {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: -8px;
 }
 .container-menu .menu .card-menu .progress__bar {
   width: 30%;
-  background: green;
-  color: white;
+  background: #99E2D0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -827,271 +827,279 @@ footer a {
   border-bottom-right-radius: 15px;
   transform: translateX(101%);
   transition: all 0.25s ease-out;
-  /*i {
-      background-color: $color-back-bis;
-      font-size: 10px;
-      color: $color-tertiary;
-      padding: 3px;
-      border-radius: 100%;
-      margin-top: 45%;
-      margin-bottom: 45%;
-      margin-left: 40%;
-
-      &:active {
-          transform: rotate(-360deg);
-          transition: transform 500ms ease-in-out;
-      }
-  }
-
-  &::before {
-      visibility: collapse;
-  }
-
-  &::after {
-      visibility: visible;
-  }
-
-  &:active {
-      background-color: $color-tertiary;
-      width: 20%;
-      height: 100%;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      transform: scaleX(1);
-      animation-name: progress-bar;
-      animation-duration: 1000ms;
-  }*/
+}
+.container-menu .menu .card-menu .progress__bar i {
+  background-color: white;
+  font-size: 10px;
+  color: #99E2D0;
+  padding: 3px;
+  border-radius: 100%;
 }
 .container-menu .menu .card-menu:hover .progress__bar {
   transform: translateX(0);
 }
-@keyframes progress-bar {
-  0% {
-    margin-left: 0px;
-    opacity: 0;
-  }
-  100% {
-    margin-left: 0px;
-    opacity: 1;
-  }
+.container-menu .menu .card-menu:hover i {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1350px) {
-  .container-menu {
-    margin-top: -12%;
-    width: 100%;
-    background-color: #f6f6f6;
-    position: relative;
-    z-index: 3;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
-  .container-menu .restaurant {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-  }
-  .container-menu .restaurant .title-restaurant {
-    font-family: shrikhand;
-    margin-left: 5px;
-  }
-  .container-menu .restaurant .like-restaurant {
-    margin-top: 3%;
-    margin-left: 70%;
-  }
-  .container-menu .menu .partie1 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .partie2 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .partie3 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .title-menu {
-    font-weight: lighter;
-    font-size: 13px;
-    text-decoration: underline #99E2D0;
-    text-align: center;
-  }
-  .container-menu .menu .card-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
-    height: 30%;
-    flex-wrap: nowrap;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px #EAEAEA;
-    margin-bottom: 20px;
-    margin-left: 25%;
-    /*.progress__bar {
+/*
+@media screen and (min-width: 768px) and (max-width: 1350px){
+    .container-menu {
+        margin-top: -12%;
+        width: 100%;
+        background-color: $color-back;
+        position: relative;
+        z-index: 3;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
 
-        i {
-            background-color: $color-back-bis;
-            font-size: 10px;
-            color: $color-tertiary;
-            padding: 3px;
-            border-radius: 100%;
-            margin-top: 45%;
-            margin-bottom: 45%;
-            margin-left: 40%;
+        .restaurant {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
 
-            &:active {
-                transform: rotate(-360deg);
-                transition: transform 500ms ease-in-out;
+            .title-restaurant {
+                font-family: shrikhand;
+                margin-left: 5px;
+            }
+
+            .like-restaurant {
+                margin-top: 3%;
+                margin-left: 70%;
             }
         }
 
-        &::before {
-            visibility: hidden;
-        }
+        .menu {
 
-        &::after {
-            visibility: visible;
-        }
+            .partie1 {
+                margin-bottom: 10%;
+            }
 
-        &:active {
-            background-color: $color-tertiary;
-            width: 20%;
-            height: 100%;
-            border-top-right-radius: 15px;
-            border-bottom-right-radius: 15px;
-            transform: scaleX(1);
-            animation-name: progress-bar;
-            animation-duration: 1000ms;
+            .partie2 {
+                margin-bottom: 10%;
+            }
+
+            .partie3 {
+                margin-bottom: 10%;
+            }
+
+            .title-menu {
+                font-weight: lighter;
+                font-size: 13px;
+                text-decoration: underline $color-tertiary;
+                text-align: center;
+            }
+
+            .card-menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 50%;
+                height: 30%;
+                flex-wrap: nowrap;
+                background-color: $color-back-bis;
+                border-radius: 15px;
+                box-shadow: 5px 5px 5px $color-shadow-ter;
+                margin-bottom: 20px;
+                margin-left: 25%;
+
+                .card-body-menu {
+
+                    .card-title-menu {
+                        padding-left: 10px;
+                        margin-bottom: -1%;
+                        font-size: 12px;
+                    }
+
+                    .card-text-menu {
+                        padding-left: 10px;
+                        font-size: 11px;
+
+                        span {
+                            font-size: 11px;
+                            font-weight: bolder;
+                            padding-left: 10px;
+
+                        }
+                    }
+                }
+                .progress__bar {
+
+                    i {
+                        background-color: $color-back-bis;
+                        font-size: 10px;
+                        color: $color-tertiary;
+                        padding: 3px;
+                        border-radius: 100%;
+                        margin-top: 45%;
+                        margin-bottom: 45%;
+                        margin-left: 40%;
+
+                        &:active {
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                        }
+                    }
+
+                    &::before {
+                        visibility: hidden;
+                    }
+
+                    &::after {
+                        visibility: visible;
+                    }
+
+                    &:active {
+                        background-color: $color-tertiary;
+                        width: 20%;
+                        height: 100%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        transform: scaleX(1);
+                        animation-name: progress-bar;
+                        animation-duration: 1000ms;
+                    }
+                }
+
+                @keyframes progress-bar{
+                    0%   { margin-left: 0px;opacity:0;}
+                    100% { margin-left: 0px;opacity:1;}
+                }
+            }
+
         }
     }
-
-    @keyframes progress-bar{
-        0%   { margin-left: 0px;opacity:0;}
-        100% { margin-left: 0px;opacity:1;}
-    }*/
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
-    padding-left: 10px;
-    margin-bottom: -1%;
-    font-size: 12px;
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
-    padding-left: 10px;
-    font-size: 11px;
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
-    font-size: 11px;
-    font-weight: bolder;
-    padding-left: 10px;
-    /*gérer l'espace entre le texte et le prix*/
-  }
 }
-@media screen and (min-width: 1350px) and (max-width: 1650px) {
-  .container-menu {
-    margin-top: -12%;
-    width: 100%;
-    background-color: #f6f6f6;
-    position: relative;
-    z-index: 3;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-  }
-  .container-menu .restaurant {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-  }
-  .container-menu .restaurant .title-restaurant {
-    font-family: shrikhand;
-    margin-left: 5px;
-  }
-  .container-menu .restaurant .like-restaurant {
-    margin-top: 3%;
-    margin-left: 70%;
-  }
-  .container-menu .menu .partie1 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .partie2 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .partie3 {
-    margin-bottom: 10%;
-  }
-  .container-menu .menu .title-menu {
-    font-weight: lighter;
-    font-size: 13px;
-    text-decoration: underline #99E2D0;
-    text-align: center;
-  }
-  .container-menu .menu .card-menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
-    height: 30%;
-    flex-wrap: nowrap;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 5px 5px 5px #EAEAEA;
-    margin-bottom: 20px;
-    margin-left: 25%;
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-title-menu {
-    padding-left: 10px;
-    margin-bottom: -1%;
-    font-size: 12px;
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-text-menu {
-    padding-left: 10px;
-    font-size: 11px;
-  }
-  .container-menu .menu .card-menu .card-body-menu .card-text-menu span {
-    font-size: 11px;
-    font-weight: bolder;
-    padding-left: 10px;
-    /*gérer l'espace entre le texte et le prix*/
-  }
-  .container-menu .menu .card-menu .progress__bar i {
-    background-color: white;
-    font-size: 10px;
-    color: #99E2D0;
-    padding: 3px;
-    border-radius: 100%;
-    margin-top: 45%;
-    margin-bottom: 45%;
-    margin-left: 40%;
-  }
-  .container-menu .menu .card-menu .progress__bar i:active {
-    transform: rotate(-360deg);
-    transition: transform 500ms ease-in-out;
-  }
-  .container-menu .menu .card-menu .progress__bar::before {
-    visibility: hidden;
-  }
-  .container-menu .menu .card-menu .progress__bar::after {
-    visibility: visible;
-  }
-  .container-menu .menu .card-menu .progress__bar:active {
-    background-color: #99E2D0;
-    width: 20%;
-    height: 100%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    transform: scaleX(1);
-    animation-name: progress-bar;
-    animation-duration: 1000ms;
-  }
-  @keyframes progress-bar {
-    0% {
-      margin-left: 0px;
-      opacity: 0;
+
+@media screen and (min-width: 1350px) and (max-width: 1650px){
+    .container-menu {
+        margin-top: -12%;
+        width: 100%;
+        background-color: $color-back;
+        position: relative;
+        z-index: 3;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+
+        .restaurant {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+
+            .title-restaurant {
+                font-family: shrikhand;
+                margin-left: 5px;
+            }
+
+            .like-restaurant {
+                margin-top: 3%;
+                margin-left: 70%;
+            }
+        }
+
+        .menu {
+
+            .partie1 {
+                margin-bottom: 10%;
+            }
+
+            .partie2 {
+                margin-bottom: 10%;
+            }
+
+            .partie3 {
+                margin-bottom: 10%;
+            }
+
+            .title-menu {
+                font-weight: lighter;
+                font-size: 13px;
+                text-decoration: underline $color-tertiary;
+                text-align: center;
+            }
+
+            .card-menu {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                width: 50%;
+                height: 30%;
+                flex-wrap: nowrap;
+                background-color: $color-back-bis;
+                border-radius: 15px;
+                box-shadow: 5px 5px 5px $color-shadow-ter;
+                margin-bottom: 20px;
+                margin-left: 25%;
+
+                .card-body-menu {
+
+                    .card-title-menu {
+                        padding-left: 10px;
+                        margin-bottom: -1%;
+                        font-size: 12px;
+                    }
+
+                    .card-text-menu {
+                        padding-left: 10px;
+                        font-size: 11px;
+
+                        span {
+                            font-size: 11px;
+                            font-weight: bolder;
+                            padding-left: 10px;
+                            /
+                        }
+                    }
+                }
+                .progress__bar {
+
+                    i {
+                        background-color: $color-back-bis;
+                        font-size: 10px;
+                        color: $color-tertiary;
+                        padding: 3px;
+                        border-radius: 100%;
+                        margin-top: 45%;
+                        margin-bottom: 45%;
+                        margin-left: 40%;
+
+                        &:active {
+                            transform: rotate(-360deg);
+                            transition: transform 500ms ease-in-out;
+                        }
+                    }
+
+                    &::before {
+                        visibility: hidden;
+                    }
+
+                    &::after {
+                        visibility: visible;
+                    }
+
+                    &:active {
+                        background-color: $color-tertiary;
+                        width: 20%;
+                        height: 100%;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        transform: scaleX(1);
+                        animation-name: progress-bar;
+                        animation-duration: 1000ms;
+                    }
+                }
+
+                @keyframes progress-bar{
+                    0%   { margin-left: 0px;opacity:0;}
+                    100% { margin-left: 0px;opacity:1;}
+                }
+            }
+
+        }
     }
-    100% {
-      margin-left: 0px;
-      opacity: 1;
-    }
-  }
 }
+*/
 .loader {
   width: 100%;
   margin: 0 auto;
