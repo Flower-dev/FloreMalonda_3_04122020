@@ -700,7 +700,7 @@ footer a {
 }
 .container #searchbox ::placeholder {
   color: #353535;
-  font-weight: medium;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -824,11 +824,11 @@ footer a {
 }
 @keyframes progress-bar {
   0% {
-    margin-right: 0px;
+    margin-left: 0px;
     opacity: 0;
   }
   100% {
-    margin-left: 0;
+    margin-left: 0px;
     opacity: 1;
   }
 }
