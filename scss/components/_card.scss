@@ -3,19 +3,6 @@
 .container2 {
     width: 100%;
 
-    /*.card-header {
-        background-size: cover;
-        height: 150px;
-        width: 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        &.lapalettedugout {
-            background-image: url('../img/restaurants/lapalettedugout.jpg');
-        }
-    pour mettre une image en background - à utiliser pour les fiches restaurant
-    }*/
-
     .restaurant-title {
         margin-top: 25px;
         margin-left: 20px;
@@ -82,10 +69,7 @@
 
                     &:active {
                         color : $color-secondary;
-                        transition: .250s ease-in-out; /*pour le
-                        moment au clic - changement de couleur
-                        pour la bordure - voir pour remplir l'interieur du coeur
-                        avec un dégradé de couleurs*/
+                        transition: .250s ease-in-out;
                     }
                 }
             }
@@ -100,7 +84,7 @@
 
         .restaurant-title {
             margin-top: 25px;
-            margin-left: 20px;
+            text-align: center;
         }
 
         .block-card {
@@ -108,92 +92,28 @@
             flex-direction: row;
             flex-wrap: nowrap;
 
-                a {
-                    text-decoration: none;
-                    color: $color-font;
-                }
-
             .card-part1 {
                 width: 100%;
                 margin-bottom: 40px;
-                margin-left: 15px;
+                margin-right: 15px;
             }
 
             .card-part2 {
                 width: 100%;
                 margin-bottom: 40px;
             }
-
-            .contenu {
-                box-sizing: border-box;
-                background-color: $color-back-bis;
-                border-radius: 15px;
-                box-shadow: 5px 5px 5px $color-shadow-ter;
-                width: 90%;
-                margin-bottom: 20px;
-                margin-left: 10px;
-                height: 50%;
-                position: relative;
-
-
-                .card-img-top {
-                    background-size: cover;
-                    object-fit: cover;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    width: 100%;
-                    height: 150px;
-                }
-
-                .new {
-                    position:absolute;
-                    z-index: 3;
-                    top: 10px;
-                    right: 10px;
-                    background-color: $color-tertiary;
-
-                    .new1 {
-                        color: $color-tertiary-bis;
-                        padding: 5px;
-                        margin: -2px;
-                    }
-                }
-
-                .card-body {
-                    margin-left: 20px;
-                    margin-bottom: 25px;
-                    margin-top: -5px;
-
-                    .card-text {
-                        margin-top: -5px;
-                        padding-bottom: 10px;
-                    }
-
-                    .like {
-                        display: flex;
-                        justify-content: flex-end;
-                        margin-left: -30%;
-                        margin-top: -40px;
-                        margin-bottom: 15px;
-
-                        &:active {
-                            color : $color-secondary;
-                        }
-                    }
-                }
-            }
         }
     }
 }
 
-@media screen and (min-width: 1350px) and (max-width: 1650px){
+@media screen and (min-width: 1350px) and (max-width: 1950px){
 
     .container2 {
         width: 100%;
 
         .restaurant-title {
             margin-top: 25px;
-            margin-left: 20px;
+            text-align: center;
         }
 
         .block-card {
@@ -201,81 +121,20 @@
             flex-direction: row;
             flex-wrap: nowrap;
 
-                a {
-                    text-decoration: none;
-                    color: $color-font;
-                }
-
             .card-part1 {
-                width: 100%;
+                width: 450px;
                 margin-bottom: 40px;
-                margin-left: 15px;
+                margin-left: 9%;
+                margin-right: 15px;
             }
 
             .card-part2 {
-                width: 100%;
+                width: 450px;
                 margin-bottom: 40px;
-            }
-
-            .contenu {
-                box-sizing: border-box;
-                background-color: $color-back-bis;
-                border-radius: 15px;
-                box-shadow: 5px 5px 5px $color-shadow-ter;
-                width: 90%;
-                margin-bottom: 20px;
-                margin-left: 10px;
-                height: 50%;
-
-
-                .card-img-top {
-                    background-size: cover;
-                    object-fit: cover;
-                    border-top-left-radius: 15px;
-                    border-top-right-radius: 15px;
-                    width: 100%;
-                    height: 150px;
-                }
-
-                .new {
-                    position:absolute;
-                    z-index: 3;
-                    margin-top: -10%;
-                    margin-left: 29%;
-                    background-color: $color-tertiary;
-
-                    .new1 {
-                        color: $color-tertiary-bis;
-                        padding: 5px;
-                        margin: -2px;
-                    }
-                }
-
-                .card-body {
-                    margin-left: 20px;
-                    margin-bottom: 25px;
-                    margin-top: -5px;
-
-                    .card-text {
-                        margin-top: -5px;
-                        padding-bottom: 10px;
-                    }
-
-                    .like {
-                        display: flex;
-                        justify-content: flex-end;
-                        margin-left: -30%;
-                        margin-top: -40px;
-                        margin-bottom: 15px;
-
-                        &:active {
-                            color : $color-secondary;
-                        }
-                    }
-                }
             }
         }
     }
+
 }
 
 
