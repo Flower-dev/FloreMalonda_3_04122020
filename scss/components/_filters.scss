@@ -76,171 +76,75 @@
 
 
 @media screen and (min-width: 768px) and (max-width: 1350px){
-  .container1 {
-    width: 100%;
-    background-color: $color-back-bis;
-    padding-top: 5px;
-    padding-bottom: 15px;
-  }
   
   .info-title {
     text-align: center;
   }
-
+  
   .info-filtres {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 15%;
+    margin-left: 12%;
 
     .block-filter {
       display: flex;
       flex-direction: row;
       
-    
       .filtres {
-          margin-bottom: 15px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          background-color: $color-back;
-          box-shadow: 5px 5px 5px $color-shadow;
-          border-radius: 10px;
-          padding: 10px;
-          width: 80%;
-          transition: background-color .250s ease;
-    
-          &:hover {
-              background-color: $color-primary-bis;
-          }
-    
-          a {
-              text-decoration: none;
-              color: $color-footer; /*attention à la couleur de la font qui n'est pas noir*/
-              font-size: 11px;
-              font-weight: bold;
-              padding-right: 10px;
-              padding-left: 10px;
-              text-align: center;
-          }
-    
-          .infographie i {
-              color: $color-footer;
-              padding-left: 5px; /*changer la couleur par défaut
-              ne pas oublier que i doit changer de couleur à la selection du filtre*/
-    
-              &:hover{
-                  color: $color-primary;
-              }
-          }
+          
+        a {
+          padding-right: 10px;
+          padding-left: 10px;
+          text-align: center;
+        }
+  
+        .infographie i {
+          color: $color-footer;
+          padding-left: 5px; 
+        }
       }
     }
-    
+
     .bulle {
-      background-color: $color-primary;
-      display: inline-block;
-      border-radius: 100%;
-      width: 17px;
-      height: 17px;
-      text-align: center;
-      font-size: 7px;
-      color: $color-font-bis;
+      align-items: center;
       margin-top: 15px;
-      margin-left: -8px;
-      position:absolute;
-      z-index: 3;
-    
-    
-      p {
-          padding-top: 3px;
-          margin-top: -1px;
-      }
     }
   }
-  
 }
 
-@media screen and (min-width: 1350px) and (max-width: 1650px){
-  .container1 {
-    width: 100%;
-    background-color: $color-back-bis;
-    padding-top: 5px;
-    padding-bottom: 15px;
-  }
-  
+@media screen and (min-width: 1350px) and (max-width: 1950px){
+
   .info-title {
     text-align: center;
   }
-
+  
   .info-filtres {
     display: flex;
     flex-wrap: nowrap;
-    margin-left: 27%;
+    margin-left: 25%;
 
     .block-filter {
       display: flex;
       flex-direction: row;
-      margin-left: 15px;
-      margin-bottom: 15px;
-    
+      
       .filtres {
-          margin-bottom: 15px;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          background-color: $color-back;
-          box-shadow: 5px 5px 5px $color-shadow;
-          border-radius: 10px;
-          padding: 10px;
-          width: 80%;
-          transition: background-color .250s ease;
-    
-          &:hover {
-              background-color: $color-primary-bis;
-          }
-    
-          a {
-              text-decoration: none;
-              color: $color-footer; /*attention à la couleur de la font qui n'est pas noir*/
-              font-size: 11px;
-              font-weight: bold;
-              padding-right: 10px;
-              padding-left: 10px;
-              text-align: center;
-          }
-    
-          .infographie i {
-              color: $color-footer;
-              padding-left: 5px; /*changer la couleur par défaut
-              ne pas oublier que i doit changer de couleur à la selection du filtre*/
-    
-              &:hover{
-                  color: $color-primary;
-              }
-          }
+          
+        a {
+          padding-right: 10px;
+          padding-left: 10px;
+          text-align: center;
+        }
+  
+        .infographie i {
+          color: $color-footer;
+          padding-left: 10px; 
+        }
       }
     }
-    
+
     .bulle {
-      background-color: $color-primary;
-      display: inline-block;
-      border-radius: 100%;
-      width: 17px;
-      height: 17px;
-      text-align: center;
-      font-size: 7px;
-      color: $color-font-bis;
+      align-items: center;
       margin-top: 15px;
-      margin-left: -8px;
-      position:absolute;
-      z-index: 3;
-    
-    
-      p {
-          padding-top: 3px;
-          margin-top: -1px;
-      }
     }
   }
 }
