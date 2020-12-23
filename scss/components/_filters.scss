@@ -31,26 +31,25 @@
       width: 90%;
       transition: background-color .250s ease;
 
-      &:hover {
-          background-color: $color-primary-bis;
-      }
+    &:hover {
+        background-color: $color-primary-bis;
+    }
 
-      a {
-          text-decoration: none;
-          color: $color-footer; /*attention à la couleur de la font qui n'est pas noir*/
-          font-size: 11px;
-          font-weight: bold;
-          padding-right: 10px;
-      }
+    a {
+        text-decoration: none;
+        color: $color-footer;
+        font-size: 11px;
+        font-weight: bold;
+        padding-right: 10px;
+    }
 
-      .infographie i {
-          color: $color-footer; /*changer la couleur par défaut
-          ne pas oublier que i doit changer de couleur à la selection du filtre*/
+    .infographie {
+        color: $color-footer; 
 
-          &:hover{
-              color: $color-primary;
-          }
+      &:hover{
+        color: $color-primary;
       }
+    }
   }
 }
 
