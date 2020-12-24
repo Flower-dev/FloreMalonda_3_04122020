@@ -182,6 +182,9 @@ footer a {
     color: #353535;
     padding-left: 5px;
   }
+  .info-filtres .block-filter .filtres .infographie i:hover {
+    color: #9356DC;
+  }
   .info-filtres .bulle {
     align-items: center;
     margin-top: 15px;
@@ -209,6 +212,9 @@ footer a {
   .info-filtres .block-filter .filtres .infographie i {
     color: #353535;
     padding-left: 10px;
+  }
+  .info-filtres .block-filter .filtres .infographie i:hover {
+    color: #9356DC;
   }
   .info-filtres .bulle {
     align-items: center;
@@ -345,7 +351,7 @@ footer a {
   margin-top: -40px;
   margin-bottom: 15px;
 }
-.container2 .block-card .contenu .card-body .like:active {
+.container2 .block-card .contenu .card-body .like:hover {
   color: #FF79DA;
   transition: 0.25s ease-in-out;
 }
@@ -494,7 +500,9 @@ footer a {
 .container-menu .menu .title-menu {
   font-weight: lighter;
   font-size: 13px;
-  text-decoration: underline #99E2D0;
+  text-decoration: underline 2px #99E2D0;
+  text-underline-position: under;
+  /* permet d'éviter les jambages */
   margin-left: 5px;
 }
 .container-menu .menu .card-menu {
@@ -573,6 +581,7 @@ footer a {
 }
 .loader {
   width: 100%;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   text-align: justify;
