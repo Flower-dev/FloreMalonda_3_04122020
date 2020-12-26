@@ -66,9 +66,15 @@
         .title-menu {
             font-weight: lighter;
             font-size: 13px;
-            text-decoration: underline 2px $color-tertiary;
-            text-underline-position: under; /* permet d'éviter les jambages */
+            //text-decoration: underline 2px $color-tertiary;
+            //text-underline-position: under; /* permet d'éviter les jambages */
             margin-left: 5px;
+
+            span {
+                display: inline-block;
+                padding-bottom: 2px;
+                border-bottom: 1px solid $color-tertiary;
+            }
         }
 
         .card-menu {
@@ -144,7 +150,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1350px){
     .container-menu {
-       
+
         .menu {
 
             .title-menu {
@@ -162,7 +168,7 @@
 
 @media screen and (min-width: 1350px) and (max-width: 1950px){
     .container-menu {
-       
+
         .menu {
 
             .title-menu {

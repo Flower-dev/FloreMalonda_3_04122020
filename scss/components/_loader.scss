@@ -6,9 +6,9 @@
     background: white;
     position: fixed;
     top: 0;
-    left: -100vw;
+    left: -100vw; //Par défaut, le loader est en dehors de l'écran
     z-index: 10000;
-    animation: 5s ease-in loader;
+    //animation: 5s ease-in loader;
 
 }
 
