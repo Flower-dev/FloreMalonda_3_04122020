@@ -580,11 +580,16 @@ footer a {
   }
 }
 .loader {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
-  position: relative;
   text-align: justify;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: 10000;
+  animation: 5s ease-in loader;
 }
 
 .custom-loading-spinner {
@@ -620,6 +625,17 @@ footer a {
   visibility: hidden;
 }
 
+@keyframes loader {
+  0% {
+    left: 0;
+  }
+  80% {
+    left: 0;
+  }
+  100% {
+    left: -100vw;
+  }
+}
 @keyframes custom-loading {
   0% {
     transform: rotate(0deg);
