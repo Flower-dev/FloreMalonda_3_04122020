@@ -33,13 +33,34 @@
 
         .like-restaurant {
             padding-right: 20px;
+            display: flex;
+            justify-content: flex-end;
 
+            .far.fa-heart {
+                position: relative;
+                z-index: 1;
+            }
+    
+            .fas.fa-heart {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transition: all .5s;
+                transform: scale(0);
+                z-index: -1;
+            }
+    
             &:hover {
-                color: $color-primary;
-                transition: .250s ease-in-out;
+                .fas.fa-heart {
+                    transform: scale(1);
+                }
             }
         }
     }
+
 
     .menu { /*pour faire apparaitre le menu au fur et à mesure jouer sur l'opacité et mettre une transition*/
 
@@ -73,7 +94,7 @@
             span {
                 display: inline-block;
                 padding-bottom: 2px;
-                border-bottom: 1px solid $color-tertiary;
+                border-bottom: 2px solid $color-tertiary;
             }
         }
 

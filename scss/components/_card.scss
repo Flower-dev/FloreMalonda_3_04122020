@@ -76,7 +76,7 @@
                         position: absolute;
                         top: 0;
                         left: 0;
-                        background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+                        background: linear-gradient(to bottom right, $color-secondary, $color-primary);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         transition: all .5s;
@@ -88,7 +88,7 @@
                         .fas.fa-heart {
                             transform: scale(1);
                         }
-                    }
+                }
             }
         }
     }
