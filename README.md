@@ -9,7 +9,4 @@ Ohmyfood! est une entreprise de commande de repas en ligne, dont le concept perm
 Le site est accessible en cliquant ici : https://flower-dev.github.io/FloreMalonda_3_04122020/
 
 
-TO DO : 
-
-- reste à gérer le pb du spinner
-- remplir les like et non les bordures 
+Projet validé le 28 décembre 2020
